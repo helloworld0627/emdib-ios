@@ -14,6 +14,7 @@
 		C00138791B4396E2001EF6A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00138781B4396E2001EF6A9 /* Images.xcassets */; };
 		C001387C1B4396E2001EF6A9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C001387A1B4396E2001EF6A9 /* LaunchScreen.xib */; };
 		C00138881B4396E3001EF6A9 /* EmdibAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C00138871B4396E3001EF6A9 /* EmdibAppTests.m */; };
+		C57A85887D878FD16003AEAF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A4EC2AF49DFEF78BD097D75 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A4EC2AF49DFEF78BD097D75 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7725AA7C570E63B897D00008 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B3F29FC28F27D5C8A0CA02A8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C00138681B4396E2001EF6A9 /* EmdibApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmdibApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C001386C1B4396E2001EF6A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C001386D1B4396E2001EF6A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C57A85887D878FD16003AEAF /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58EF2050586001850A7F53DD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7725AA7C570E63B897D00008 /* Pods.debug.xcconfig */,
+				B3F29FC28F27D5C8A0CA02A8 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BE51D6A5975BA8E1CFF02BD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A4EC2AF49DFEF78BD097D75 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C001385F1B4396E2001EF6A9 = {
 			isa = PBXGroup;
 			children = (
 				C001386A1B4396E2001EF6A9 /* EmdibApp */,
 				C00138841B4396E3001EF6A9 /* EmdibAppTests */,
 				C00138691B4396E2001EF6A9 /* Products */,
+				58EF2050586001850A7F53DD /* Pods */,
+				BE51D6A5975BA8E1CFF02BD0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C001388B1B4396E3001EF6A9 /* Build configuration list for PBXNativeTarget "EmdibApp" */;
 			buildPhases = (
+				88E261E73B61CF4B473B816D /* Check Pods Manifest.lock */,
 				C00138641B4396E2001EF6A9 /* Sources */,
 				C00138651B4396E2001EF6A9 /* Frameworks */,
 				C00138661B4396E2001EF6A9 /* Resources */,
+				14ABF8019AB9EAD0C1E8EE6A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +239,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14ABF8019AB9EAD0C1E8EE6A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88E261E73B61CF4B473B816D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C00138641B4396E2001EF6A9 /* Sources */ = {
@@ -343,6 +402,7 @@
 		};
 		C001388C1B4396E3001EF6A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7725AA7C570E63B897D00008 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EmdibApp/Info.plist;
@@ -353,6 +413,7 @@
 		};
 		C001388D1B4396E3001EF6A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3F29FC28F27D5C8A0CA02A8 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EmdibApp/Info.plist;
@@ -414,6 +475,7 @@
 				C001388D1B4396E3001EF6A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C001388E1B4396E3001EF6A9 /* Build configuration list for PBXNativeTarget "EmdibAppTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +484,7 @@
 				C00138901B4396E3001EF6A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
