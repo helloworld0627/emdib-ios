@@ -14,6 +14,8 @@
 		C00138791B4396E2001EF6A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00138781B4396E2001EF6A9 /* Images.xcassets */; };
 		C001387C1B4396E2001EF6A9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C001387A1B4396E2001EF6A9 /* LaunchScreen.xib */; };
 		C00138881B4396E3001EF6A9 /* EmdibAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C00138871B4396E3001EF6A9 /* EmdibAppTests.m */; };
+		C097AB7D1B485731001ED5B8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C097AB7C1B485731001ED5B8 /* MapKit.framework */; };
+		C097AB7F1B48573B001ED5B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C097AB7E1B48573B001ED5B8 /* Foundation.framework */; };
 		C57A85887D878FD16003AEAF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A4EC2AF49DFEF78BD097D75 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		C00138811B4396E3001EF6A9 /* EmdibAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmdibAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00138861B4396E3001EF6A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C00138871B4396E3001EF6A9 /* EmdibAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmdibAppTests.m; sourceTree = "<group>"; };
+		C097AB7C1B485731001ED5B8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C097AB7E1B48573B001ED5B8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C097AB7F1B48573B001ED5B8 /* Foundation.framework in Frameworks */,
+				C097AB7D1B485731001ED5B8 /* MapKit.framework in Frameworks */,
 				C57A85887D878FD16003AEAF /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,6 +83,8 @@
 		BE51D6A5975BA8E1CFF02BD0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C097AB7E1B48573B001ED5B8 /* Foundation.framework */,
+				C097AB7C1B485731001ED5B8 /* MapKit.framework */,
 				6A4EC2AF49DFEF78BD097D75 /* libPods.a */,
 			);
 			name = Frameworks;
