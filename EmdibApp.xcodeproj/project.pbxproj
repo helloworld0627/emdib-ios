@@ -332,6 +332,7 @@
 /* Begin XCBuildConfiguration section */
 		C00138891B4396E3001EF6A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7725AA7C570E63B897D00008 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -374,6 +375,7 @@
 		};
 		C001388A1B4396E3001EF6A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3F29FC28F27D5C8A0CA02A8 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -432,6 +434,7 @@
 		};
 		C001388F1B4396E3001EF6A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7725AA7C570E63B897D00008 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -451,6 +454,7 @@
 		};
 		C00138901B4396E3001EF6A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3F29FC28F27D5C8A0CA02A8 /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
