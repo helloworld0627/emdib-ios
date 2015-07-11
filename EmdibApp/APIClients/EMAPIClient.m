@@ -294,34 +294,34 @@ static EMAPIClient* apiClient = nil;
 
 // Categories
 -(NSArray *)getCategoriesFromResponse:(id)responseObject error:(NSError**)error {
-    return nil;
+    return [MTLJSONAdapter modelsOfClass:[EMCategory class] fromJSONArray:responseObject error:error];
 }
 
 // Comments
 -(NSArray *)getCommentsFromResponse:(id)responseObject error:(NSError**)error {
-    return nil;
+    return [MTLJSONAdapter modelsOfClass:[EMComment class] fromJSONArray:responseObject error:error];
 }
 
 -(EMComment *)getCommentFromResponse:(id)responseObject error:(NSError**)error {
-    return nil;
+    return [MTLJSONAdapter modelOfClass:[EMComment class] fromJSONDictionary:responseObject error:error];
 }
 
 // Auctions
 -(NSArray *)getAuctionsFromResponse:(id)responseObject error:(NSError**)error {
-    return nil;
+    return [MTLJSONAdapter modelsOfClass:[EMAuction class] fromJSONArray:responseObject error:error];
 }
 
 -(EMAuction *)getAuctionFromResponse:(id)responseObject error:(NSError**)error {
-    return nil;
+    return [MTLJSONAdapter modelOfClass:[EMAuction class] fromJSONDictionary:responseObject error:error];
 }
 
 // Bids
 -(NSArray *)getBidsFromResponse:(id)responseObject error:(NSError**)error {
-    return nil;
+    return [MTLJSONAdapter modelsOfClass:[EMBid class] fromJSONArray:responseObject error:error];
 }
 
 -(EMBid *)getBidFromResponse:(id)responseObject error:(NSError**)error {
-    return nil;
+    return [MTLJSONAdapter modelOfClass:[EMBid class] fromJSONDictionary:responseObject error:error];
 }
 
 // Error
@@ -332,7 +332,7 @@ static EMAPIClient* apiClient = nil;
 
 #pragma mark - Helper
 
-- (NSString *) hostURLWithPath:(NSString*)path {
+- (NSString *)hostURLWithPath:(NSString*)path {
     // TODO move to property list
     NSURL *hostURL = [[NSURL alloc]initWithString:@"https://sleepy-inlet-9029.herokuapp.com"];
     NSURL *fullURL = [hostURL URLByAppendingPathComponent: path];
