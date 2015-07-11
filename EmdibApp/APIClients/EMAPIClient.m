@@ -333,7 +333,8 @@ static EMAPIClient* apiClient = nil;
 #pragma mark - Helper
 
 - (NSString *) hostURLWithPath:(NSString*)path {
-    NSURL *hostURL = [[NSURL alloc]initWithString:@""];
+    // TODO move to property list
+    NSURL *hostURL = [[NSURL alloc]initWithString:@"https://sleepy-inlet-9029.herokuapp.com"];
     NSURL *fullURL = [hostURL URLByAppendingPathComponent: path];
     return [fullURL absoluteString];
 }
