@@ -16,6 +16,7 @@
 		C00138881B4396E3001EF6A9 /* EmdibAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C00138871B4396E3001EF6A9 /* EmdibAppTests.m */; };
 		C07F94201B50936100156FA0 /* EMAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C07F941F1B50936100156FA0 /* EMAPIClient.m */; };
 		C07F94211B50936100156FA0 /* EMAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C07F941F1B50936100156FA0 /* EMAPIClient.m */; };
+		C07F94231B51DB4300156FA0 /* EMAPIClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C07F94221B51DB4300156FA0 /* EMAPIClientTests.m */; };
 		C097AB7D1B485731001ED5B8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C097AB7C1B485731001ED5B8 /* MapKit.framework */; };
 		C097AB7F1B48573B001ED5B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C097AB7E1B48573B001ED5B8 /* Foundation.framework */; };
 		C097ABD21B49BF1F001ED5B8 /* EMBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C097ABD11B49BF1F001ED5B8 /* EMBaseModel.m */; };
@@ -60,6 +61,7 @@
 		C00138871B4396E3001EF6A9 /* EmdibAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmdibAppTests.m; sourceTree = "<group>"; };
 		C07F941E1B50936100156FA0 /* EMAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMAPIClient.h; path = APIClients/EMAPIClient.h; sourceTree = "<group>"; };
 		C07F941F1B50936100156FA0 /* EMAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMAPIClient.m; path = APIClients/EMAPIClient.m; sourceTree = "<group>"; };
+		C07F94221B51DB4300156FA0 /* EMAPIClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMAPIClientTests.m; sourceTree = "<group>"; };
 		C097AB7C1B485731001ED5B8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C097AB7E1B48573B001ED5B8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C097ABD01B49BF1F001ED5B8 /* EMBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMBaseModel.h; path = Models/EMBaseModel.h; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				C00138871B4396E3001EF6A9 /* EmdibAppTests.m */,
+				C07F94221B51DB4300156FA0 /* EMAPIClientTests.m */,
 				C00138851B4396E3001EF6A9 /* Supporting Files */,
 			);
 			path = EmdibAppTests;
@@ -357,6 +360,7 @@
 				C00138881B4396E3001EF6A9 /* EmdibAppTests.m in Sources */,
 				C097ABD71B49C17E001ED5B8 /* EMCategory.m in Sources */,
 				C097ABD31B49BF1F001ED5B8 /* EMBaseModel.m in Sources */,
+				C07F94231B51DB4300156FA0 /* EMAPIClientTests.m in Sources */,
 				C0CA36091B49DE1D00725563 /* EMBid.m in Sources */,
 				C0CA36051B49DB0600725563 /* EMComment.m in Sources */,
 				C0CA36011B49D99000725563 /* EMAuction.m in Sources */,
