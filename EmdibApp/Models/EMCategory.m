@@ -11,10 +11,11 @@
 @implementation EMCategory
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
-    return @{
+    NSDictionary *parentDict = [super JSONKeyPathsByPropertyKey];
+    return [parentDict mtl_dictionaryByAddingEntriesFromDictionary:  @{
              @"name": @"name",
              @"parentCategoryId": @"parent_id"
-             };
+             }];
 }
 
 @end

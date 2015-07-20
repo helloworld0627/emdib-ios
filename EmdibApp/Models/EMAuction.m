@@ -12,7 +12,8 @@
 @implementation EMAuction
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
-    return @{
+    NSDictionary *parentDict = [super JSONKeyPathsByPropertyKey];
+    return [parentDict mtl_dictionaryByAddingEntriesFromDictionary: @{
              @"title": @"auction_title",
              @"status": @"auction_status",
              @"desc": @"auction_desc",
@@ -24,7 +25,7 @@
              @"categoryId": @"category_id",
              @"longtitude": @"longtitude",
              @"latitude": @"latitude"
-             };
+             }];
 }
 
 + (NSValueTransformer *)startDateJSONTransformer {

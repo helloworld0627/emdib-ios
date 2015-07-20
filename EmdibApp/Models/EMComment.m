@@ -11,11 +11,12 @@
 @implementation EMComment
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
-    return @{
+    NSDictionary *parentDict = [super JSONKeyPathsByPropertyKey];
+    return [parentDict mtl_dictionaryByAddingEntriesFromDictionary:@{
              @"content": @"content",
              @"auctionId": @"auction_id",
-             @"userId": @"user_id",
-             };
+             @"userId": @"user_id"
+             }];
 }
 
 

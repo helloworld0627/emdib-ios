@@ -12,12 +12,13 @@
 @implementation EMBid
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
-    return @{
+    NSDictionary *parentDict = [super JSONKeyPathsByPropertyKey];
+    return [parentDict mtl_dictionaryByAddingEntriesFromDictionary: @{
              @"price": @"bid_price",
              @"status": @"bid_status",
              @"auctionId": @"auction_id",
              @"buyerId" : @"buyer_id"
-             };
+             }];
 }
 
 + (NSValueTransformer *)statusJSONTransformer {

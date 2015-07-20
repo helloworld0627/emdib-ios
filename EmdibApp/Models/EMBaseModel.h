@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "MTLModel.h"
 #import "MTLJSONAdapter.h"
+#import "NSDictionary+MTLManipulationAdditions.h"
 
 extern NSString* const kISO8601DateTransformerString;
 
