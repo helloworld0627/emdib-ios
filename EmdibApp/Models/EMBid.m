@@ -30,5 +30,23 @@
                                                                            }];
 }
 
++ (NSString*) stringFromBidStatus:(BidStatus)status {
+    NSString *val = @"-";
+    switch (status) {
+        case BidStatusBegin:
+            val = @"Begin";
+            break;
+        case BidStatusEndWin:
+            val = @"End (Win)";
+            break;
+        case BidStatusEndLose:
+            val = @"End (Lose)";
+            break;
+        case BidStatusCancel:
+            val = @"Cancel";
+            break;
+    }
+    return val;
+}
 
 @end

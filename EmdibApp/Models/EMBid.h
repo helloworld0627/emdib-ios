@@ -16,7 +16,6 @@ typedef enum : NSUInteger {
     BidStatusCancel,
 } BidStatus;
 
-
 @interface EMBid : EMBaseModel
 
 @property (nonatomic) BidStatus status;

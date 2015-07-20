@@ -34,5 +34,6 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong) NSNumber *longtitude;
 @property (nonatomic, strong) NSNumber *latitude;
 
++ (NSString*) stringFromAuctionStatus:(AuctionStatus)status;
 
 @end

@@ -44,4 +44,20 @@
                                                                            }];
 }
 
++ (NSString*) stringFromAuctionStatus:(AuctionStatus)status {
+    NSString *val = @"-";
+    switch (status) {
+        case AuctionStatusBegin:
+            val = @"Begin";
+            break;
+        case AuctionStatusEnd:
+            val = @"End";
+            break;
+        case AuctionStatusCancel:
+            val = @"Cancel";
+            break;
+    }
+    return val;
+}
+
 @end
