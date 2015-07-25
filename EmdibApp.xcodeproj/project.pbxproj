@@ -23,6 +23,19 @@
 		C097ABD31B49BF1F001ED5B8 /* EMBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C097ABD11B49BF1F001ED5B8 /* EMBaseModel.m */; };
 		C097ABD61B49C17E001ED5B8 /* EMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C097ABD51B49C17E001ED5B8 /* EMCategory.m */; };
 		C097ABD71B49C17E001ED5B8 /* EMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C097ABD51B49C17E001ED5B8 /* EMCategory.m */; };
+		C0B804161B6425EC00B0CA47 /* EMAuctionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804151B6425EC00B0CA47 /* EMAuctionListViewController.m */; };
+		C0B804191B64260400B0CA47 /* EMBidListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804181B64260400B0CA47 /* EMBidListViewController.m */; };
+		C0B8041A1B64260400B0CA47 /* EMBidListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804181B64260400B0CA47 /* EMBidListViewController.m */; };
+		C0B8041D1B64267700B0CA47 /* EMAuctionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B8041C1B64267700B0CA47 /* EMAuctionDetailViewController.m */; };
+		C0B8041E1B64267700B0CA47 /* EMAuctionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B8041C1B64267700B0CA47 /* EMAuctionDetailViewController.m */; };
+		C0B804211B64268E00B0CA47 /* EMBidDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804201B64268E00B0CA47 /* EMBidDetailViewController.m */; };
+		C0B804221B64268E00B0CA47 /* EMBidDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804201B64268E00B0CA47 /* EMBidDetailViewController.m */; };
+		C0B804251B6426DE00B0CA47 /* EMStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804241B6426DE00B0CA47 /* EMStatusViewController.m */; };
+		C0B804261B6426DE00B0CA47 /* EMStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804241B6426DE00B0CA47 /* EMStatusViewController.m */; };
+		C0B804291B6426EE00B0CA47 /* EMCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804281B6426EE00B0CA47 /* EMCategoryViewController.m */; };
+		C0B8042A1B6426EE00B0CA47 /* EMCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804281B6426EE00B0CA47 /* EMCategoryViewController.m */; };
+		C0B8042D1B64274A00B0CA47 /* EMCommentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B8042C1B64274A00B0CA47 /* EMCommentListViewController.m */; };
+		C0B8042E1B64274A00B0CA47 /* EMCommentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B8042C1B64274A00B0CA47 /* EMCommentListViewController.m */; };
 		C0CA36001B49D99000725563 /* EMAuction.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CA35FF1B49D99000725563 /* EMAuction.m */; };
 		C0CA36011B49D99000725563 /* EMAuction.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CA35FF1B49D99000725563 /* EMAuction.m */; };
 		C0CA36041B49DB0600725563 /* EMComment.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CA36031B49DB0600725563 /* EMComment.m */; };
@@ -68,6 +81,20 @@
 		C097ABD11B49BF1F001ED5B8 /* EMBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMBaseModel.m; path = Models/EMBaseModel.m; sourceTree = "<group>"; };
 		C097ABD41B49C17E001ED5B8 /* EMCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMCategory.h; path = Models/EMCategory.h; sourceTree = "<group>"; };
 		C097ABD51B49C17E001ED5B8 /* EMCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMCategory.m; path = Models/EMCategory.m; sourceTree = "<group>"; };
+		C0B804141B6425EC00B0CA47 /* EMAuctionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMAuctionListViewController.h; path = UI/Controllers/EMAuctionListViewController.h; sourceTree = "<group>"; };
+		C0B804151B6425EC00B0CA47 /* EMAuctionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMAuctionListViewController.m; path = UI/Controllers/EMAuctionListViewController.m; sourceTree = "<group>"; };
+		C0B804171B64260400B0CA47 /* EMBidListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMBidListViewController.h; path = UI/Controllers/EMBidListViewController.h; sourceTree = "<group>"; };
+		C0B804181B64260400B0CA47 /* EMBidListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMBidListViewController.m; path = UI/Controllers/EMBidListViewController.m; sourceTree = "<group>"; };
+		C0B8041B1B64267700B0CA47 /* EMAuctionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMAuctionDetailViewController.h; path = UI/Controllers/EMAuctionDetailViewController.h; sourceTree = "<group>"; };
+		C0B8041C1B64267700B0CA47 /* EMAuctionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMAuctionDetailViewController.m; path = UI/Controllers/EMAuctionDetailViewController.m; sourceTree = "<group>"; };
+		C0B8041F1B64268E00B0CA47 /* EMBidDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMBidDetailViewController.h; path = UI/Controllers/EMBidDetailViewController.h; sourceTree = "<group>"; };
+		C0B804201B64268E00B0CA47 /* EMBidDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMBidDetailViewController.m; path = UI/Controllers/EMBidDetailViewController.m; sourceTree = "<group>"; };
+		C0B804231B6426DE00B0CA47 /* EMStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMStatusViewController.h; path = UI/Controllers/EMStatusViewController.h; sourceTree = "<group>"; };
+		C0B804241B6426DE00B0CA47 /* EMStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMStatusViewController.m; path = UI/Controllers/EMStatusViewController.m; sourceTree = "<group>"; };
+		C0B804271B6426EE00B0CA47 /* EMCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMCategoryViewController.h; path = UI/Controllers/EMCategoryViewController.h; sourceTree = "<group>"; };
+		C0B804281B6426EE00B0CA47 /* EMCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMCategoryViewController.m; path = UI/Controllers/EMCategoryViewController.m; sourceTree = "<group>"; };
+		C0B8042B1B64274A00B0CA47 /* EMCommentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMCommentListViewController.h; path = UI/Controllers/EMCommentListViewController.h; sourceTree = "<group>"; };
+		C0B8042C1B64274A00B0CA47 /* EMCommentListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMCommentListViewController.m; path = UI/Controllers/EMCommentListViewController.m; sourceTree = "<group>"; };
 		C0CA35FE1B49D99000725563 /* EMAuction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMAuction.h; path = Models/EMAuction.h; sourceTree = "<group>"; };
 		C0CA35FF1B49D99000725563 /* EMAuction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMAuction.m; path = Models/EMAuction.m; sourceTree = "<group>"; };
 		C0CA36021B49DB0600725563 /* EMComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMComment.h; path = Models/EMComment.h; sourceTree = "<group>"; };
@@ -139,6 +166,7 @@
 		C001386A1B4396E2001EF6A9 /* EmdibApp */ = {
 			isa = PBXGroup;
 			children = (
+				C0B8040E1B64242400B0CA47 /* UI */,
 				C07F941D1B50931900156FA0 /* APIClients */,
 				C097ABCB1B49BE7C001ED5B8 /* Models */,
 				C001386F1B4396E2001EF6A9 /* AppDelegate.h */,
@@ -204,6 +232,43 @@
 				C0CA36071B49DE1D00725563 /* EMBid.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		C0B8040E1B64242400B0CA47 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C0B804101B64248D00B0CA47 /* Components */,
+				C0B8040F1B64245600B0CA47 /* Controllers */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		C0B8040F1B64245600B0CA47 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C0B804141B6425EC00B0CA47 /* EMAuctionListViewController.h */,
+				C0B804151B6425EC00B0CA47 /* EMAuctionListViewController.m */,
+				C0B804171B64260400B0CA47 /* EMBidListViewController.h */,
+				C0B804181B64260400B0CA47 /* EMBidListViewController.m */,
+				C0B8041B1B64267700B0CA47 /* EMAuctionDetailViewController.h */,
+				C0B8041C1B64267700B0CA47 /* EMAuctionDetailViewController.m */,
+				C0B8041F1B64268E00B0CA47 /* EMBidDetailViewController.h */,
+				C0B804201B64268E00B0CA47 /* EMBidDetailViewController.m */,
+				C0B804231B6426DE00B0CA47 /* EMStatusViewController.h */,
+				C0B804241B6426DE00B0CA47 /* EMStatusViewController.m */,
+				C0B804271B6426EE00B0CA47 /* EMCategoryViewController.h */,
+				C0B804281B6426EE00B0CA47 /* EMCategoryViewController.m */,
+				C0B8042B1B64274A00B0CA47 /* EMCommentListViewController.h */,
+				C0B8042C1B64274A00B0CA47 /* EMCommentListViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C0B804101B64248D00B0CA47 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,10 +407,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C00138741B4396E2001EF6A9 /* ViewController.m in Sources */,
+				C0B8041D1B64267700B0CA47 /* EMAuctionDetailViewController.m in Sources */,
+				C0B804251B6426DE00B0CA47 /* EMStatusViewController.m in Sources */,
 				C07F94201B50936100156FA0 /* EMAPIClient.m in Sources */,
 				C00138711B4396E2001EF6A9 /* AppDelegate.m in Sources */,
+				C0B804211B64268E00B0CA47 /* EMBidDetailViewController.m in Sources */,
 				C001386E1B4396E2001EF6A9 /* main.m in Sources */,
+				C0B804161B6425EC00B0CA47 /* EMAuctionListViewController.m in Sources */,
+				C0B8042D1B64274A00B0CA47 /* EMCommentListViewController.m in Sources */,
 				C0CA36081B49DE1D00725563 /* EMBid.m in Sources */,
+				C0B804291B6426EE00B0CA47 /* EMCategoryViewController.m in Sources */,
+				C0B804191B64260400B0CA47 /* EMBidListViewController.m in Sources */,
 				C097ABD21B49BF1F001ED5B8 /* EMBaseModel.m in Sources */,
 				C097ABD61B49C17E001ED5B8 /* EMCategory.m in Sources */,
 				C0CA36001B49D99000725563 /* EMAuction.m in Sources */,
@@ -357,12 +429,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0B804221B64268E00B0CA47 /* EMBidDetailViewController.m in Sources */,
+				C0B8041A1B64260400B0CA47 /* EMBidListViewController.m in Sources */,
+				C0B8042A1B6426EE00B0CA47 /* EMCategoryViewController.m in Sources */,
 				C00138881B4396E3001EF6A9 /* EmdibAppTests.m in Sources */,
 				C097ABD71B49C17E001ED5B8 /* EMCategory.m in Sources */,
+				C0B804261B6426DE00B0CA47 /* EMStatusViewController.m in Sources */,
+				C0B8042E1B64274A00B0CA47 /* EMCommentListViewController.m in Sources */,
 				C097ABD31B49BF1F001ED5B8 /* EMBaseModel.m in Sources */,
 				C07F94231B51DB4300156FA0 /* EMAPIClientTests.m in Sources */,
 				C0CA36091B49DE1D00725563 /* EMBid.m in Sources */,
 				C0CA36051B49DB0600725563 /* EMComment.m in Sources */,
+				C0B8041E1B64267700B0CA47 /* EMAuctionDetailViewController.m in Sources */,
 				C0CA36011B49D99000725563 /* EMAuction.m in Sources */,
 				C07F94211B50936100156FA0 /* EMAPIClient.m in Sources */,
 			);
