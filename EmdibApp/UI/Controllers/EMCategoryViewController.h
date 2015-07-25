@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EMCategoryViewController : UIViewController
+@interface EMCategoryViewController : UITableViewController
 
 @end
