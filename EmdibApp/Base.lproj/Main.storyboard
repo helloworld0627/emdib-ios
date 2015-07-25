@@ -10,7 +10,7 @@
         <!--List Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="List Item" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="List Item" customClass="EMAuctionListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionListItem" rowHeight="88" id="SRY-SG-O5h" userLabel="Auction List Item">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionListItem" rowHeight="88" id="SRY-SG-O5h" userLabel="Auction List Item" customClass="EMAuctionListTableViewCell">
                                         <rect key="frame" x="140" y="278" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SRY-SG-O5h" id="9nN-8k-Lst">
@@ -157,10 +157,10 @@
             </objects>
             <point key="canvasLocation" x="-4503" y="-816"/>
         </scene>
-        <!--View Controller-->
+        <!--Bid List View Controller-->
         <scene sceneID="Nvo-hR-BRV">
             <objects>
-                <viewController id="Ry0-x7-kfl" sceneMemberID="viewController">
+                <viewController id="Ry0-x7-kfl" customClass="EMBidListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="msR-xm-zUY"/>
                         <viewControllerLayoutGuide type="bottom" id="GEW-Yg-ybg"/>
@@ -173,7 +173,7 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BidListItem" rowHeight="88" id="7WH-LX-DtU">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BidListItem" rowHeight="88" id="7WH-LX-DtU" customClass="EMBidListTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7WH-LX-DtU" id="kEt-xa-CuF">
@@ -225,10 +225,10 @@
             </objects>
             <point key="canvasLocation" x="-3609" y="-1604"/>
         </scene>
-        <!--View Controller-->
+        <!--Bid Detail View Controller-->
         <scene sceneID="Aas-1m-2Xn">
             <objects>
-                <viewController id="2z8-O3-ndU" sceneMemberID="viewController">
+                <viewController id="2z8-O3-ndU" customClass="EMBidDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sCG-nQ-FnB"/>
                         <viewControllerLayoutGuide type="bottom" id="KyQ-3v-S7a"/>
@@ -253,7 +253,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BidDetailPriceCell" id="ARK-nE-ZQ8" userLabel="Price Cell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BidDetailPriceCell" id="ARK-nE-ZQ8" userLabel="Price Cell" customClass="EMBidDetailPriceTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ARK-nE-ZQ8" id="bua-Do-z5r">
@@ -279,7 +279,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BidDetailStatusCell" id="pW2-0j-qTP" userLabel="Status Cell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BidDetailStatusCell" id="pW2-0j-qTP" userLabel="Status Cell" customClass="EMBidDetailStatusTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pW2-0j-qTP" id="Iqp-vA-MFJ">
@@ -310,11 +310,11 @@
             </objects>
             <point key="canvasLocation" x="-2913" y="-1604"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Status View Controller-->
         <scene sceneID="7HG-Hm-kA8">
             <objects>
-                <tableViewController id="gxJ-yG-aOc" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="MTw-Yu-jJz" userLabel="Status List">
+                <tableViewController id="gxJ-yG-aOc" customClass="EMStatusViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="MTw-Yu-jJz" userLabel="Status List" customClass="EMs">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -336,10 +336,10 @@
             </objects>
             <point key="canvasLocation" x="-2272" y="-1604"/>
         </scene>
-        <!--View Controller-->
+        <!--Auction Detail View Controller-->
         <scene sceneID="Ky3-Nv-gY1">
             <objects>
-                <viewController id="ri7-ZG-btk" sceneMemberID="viewController">
+                <viewController id="ri7-ZG-btk" customClass="EMAuctionDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SOq-Oo-pNn"/>
                         <viewControllerLayoutGuide type="bottom" id="0dl-XP-KkV"/>
@@ -352,7 +352,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailMapCell" rowHeight="120" id="VbX-ma-FYp" userLabel="Map Cell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailMapCell" rowHeight="120" id="VbX-ma-FYp" userLabel="Map Cell" customClass="EMAuctionDetailLocationTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VbX-ma-FYp" id="cEl-zh-i5H">
@@ -370,7 +370,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailTitleCell" id="6eH-ba-LO6" userLabel="Title Cell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailTitleCell" id="6eH-ba-LO6" userLabel="Title Cell" customClass="EMAuctionDetailTitleTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6eH-ba-LO6" id="Tm2-60-We0">
@@ -391,7 +391,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailDescCell" rowHeight="120" id="JG3-CS-fpH" userLabel="Description Cell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailDescCell" rowHeight="120" id="JG3-CS-fpH" userLabel="Description Cell" customClass="EMAuctionDetailDescriptionTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JG3-CS-fpH" id="BES-hF-xkD">
@@ -413,7 +413,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailCategoryCell" id="CDC-0F-XU0" userLabel="Category Cell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailCategoryCell" id="CDC-0F-XU0" userLabel="Category Cell" customClass="EMAuctionDetailCategoryTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CDC-0F-XU0" id="UXa-dE-JWW">
@@ -434,7 +434,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailStatusCell" id="uvh-ph-Wvz" userLabel="Status Cell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailStatusCell" id="uvh-ph-Wvz" userLabel="Status Cell" customClass="EMAuctionDetailStatusTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uvh-ph-Wvz" id="odj-0X-FDG">
@@ -455,7 +455,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailStartDateCell" id="QSM-Bg-Ruh" userLabel="StartDate Cell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailStartDateCell" id="QSM-Bg-Ruh" userLabel="StartDate Cell" customClass="EMAuctionDetailStartDateTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QSM-Bg-Ruh" id="8QG-z3-0N5">
@@ -476,7 +476,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailEndDateCell" id="3gj-i2-fNi" userLabel="EndDate Cell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailEndDateCell" id="3gj-i2-fNi" userLabel="EndDate Cell" customClass="EMAuctionDetailEndDateTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3gj-i2-fNi" id="wNc-DA-Gcj">
@@ -497,7 +497,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailStartPriceCell" id="HGO-Xa-rgY" userLabel="StartPrice Cell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailStartPriceCell" id="HGO-Xa-rgY" userLabel="StartPrice Cell" customClass="EMAuctionDetailStartPriceTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HGO-Xa-rgY" id="9MJ-0k-tfk">
@@ -523,7 +523,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailEndPriceCell" id="Ni3-pd-A2u" userLabel="EndPrice Cell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailEndPriceCell" id="Ni3-pd-A2u" userLabel="EndPrice Cell" customClass="EMAuctionDetailEndPriceTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ni3-pd-A2u" id="Xn7-k6-dVC">
@@ -559,10 +559,10 @@
             </objects>
             <point key="canvasLocation" x="-2913" y="-946"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Category View Controller-->
         <scene sceneID="Tr5-jD-mAz">
             <objects>
-                <tableViewController id="NpD-OJ-hcO" sceneMemberID="viewController">
+                <tableViewController id="NpD-OJ-hcO" customClass="EMCategoryViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DDF-J8-ULK" userLabel="Category List">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -585,10 +585,10 @@
             </objects>
             <point key="canvasLocation" x="-2272" y="-946"/>
         </scene>
-        <!--View Controller-->
+        <!--Comment List View Controller-->
         <scene sceneID="q7m-ox-LEq">
             <objects>
-                <viewController id="GSm-Rt-h3L" sceneMemberID="viewController">
+                <viewController id="GSm-Rt-h3L" customClass="EMCommentListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GjE-Kg-3oL"/>
                         <viewControllerLayoutGuide type="bottom" id="9dI-Gv-YUx"/>
