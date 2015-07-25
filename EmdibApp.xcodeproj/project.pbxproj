@@ -36,6 +36,34 @@
 		C0B8042A1B6426EE00B0CA47 /* EMCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804281B6426EE00B0CA47 /* EMCategoryViewController.m */; };
 		C0B8042D1B64274A00B0CA47 /* EMCommentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B8042C1B64274A00B0CA47 /* EMCommentListViewController.m */; };
 		C0B8042E1B64274A00B0CA47 /* EMCommentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B8042C1B64274A00B0CA47 /* EMCommentListViewController.m */; };
+		C0B8044C1B6432D300B0CA47 /* EMCommentListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B8044B1B6432D300B0CA47 /* EMCommentListTableViewCell.m */; };
+		C0B8044D1B6432D300B0CA47 /* EMCommentListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B8044B1B6432D300B0CA47 /* EMCommentListTableViewCell.m */; };
+		C0B804501B6432FE00B0CA47 /* EMAuctionListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B8044F1B6432FE00B0CA47 /* EMAuctionListTableViewCell.m */; };
+		C0B804511B6432FE00B0CA47 /* EMAuctionListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B8044F1B6432FE00B0CA47 /* EMAuctionListTableViewCell.m */; };
+		C0B804541B64331A00B0CA47 /* EMBidListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804531B64331A00B0CA47 /* EMBidListTableViewCell.m */; };
+		C0B804551B64331A00B0CA47 /* EMBidListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804531B64331A00B0CA47 /* EMBidListTableViewCell.m */; };
+		C0B804581B6433AF00B0CA47 /* EMBidDetailPriceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804571B6433AF00B0CA47 /* EMBidDetailPriceTableViewCell.m */; };
+		C0B804591B6433AF00B0CA47 /* EMBidDetailPriceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804571B6433AF00B0CA47 /* EMBidDetailPriceTableViewCell.m */; };
+		C0B8045C1B6433D200B0CA47 /* EMBidDetailStatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B8045B1B6433D200B0CA47 /* EMBidDetailStatusTableViewCell.m */; };
+		C0B8045D1B6433D200B0CA47 /* EMBidDetailStatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B8045B1B6433D200B0CA47 /* EMBidDetailStatusTableViewCell.m */; };
+		C0B804601B64346E00B0CA47 /* EMAuctionDetailStatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B8045F1B64346E00B0CA47 /* EMAuctionDetailStatusTableViewCell.m */; };
+		C0B804611B64346E00B0CA47 /* EMAuctionDetailStatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B8045F1B64346E00B0CA47 /* EMAuctionDetailStatusTableViewCell.m */; };
+		C0B804641B64348C00B0CA47 /* EMAuctionDetailTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804631B64348C00B0CA47 /* EMAuctionDetailTitleTableViewCell.m */; };
+		C0B804651B64348C00B0CA47 /* EMAuctionDetailTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804631B64348C00B0CA47 /* EMAuctionDetailTitleTableViewCell.m */; };
+		C0B804681B6434AB00B0CA47 /* EMAuctionDetailDescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804671B6434AB00B0CA47 /* EMAuctionDetailDescriptionTableViewCell.m */; };
+		C0B804691B6434AB00B0CA47 /* EMAuctionDetailDescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804671B6434AB00B0CA47 /* EMAuctionDetailDescriptionTableViewCell.m */; };
+		C0B8046C1B6434DC00B0CA47 /* EMAuctionDetailCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B8046B1B6434DC00B0CA47 /* EMAuctionDetailCategoryTableViewCell.m */; };
+		C0B8046D1B6434DC00B0CA47 /* EMAuctionDetailCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B8046B1B6434DC00B0CA47 /* EMAuctionDetailCategoryTableViewCell.m */; };
+		C0B804701B6434FE00B0CA47 /* EMAuctionDetailStartDateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B8046F1B6434FE00B0CA47 /* EMAuctionDetailStartDateTableViewCell.m */; };
+		C0B804711B6434FE00B0CA47 /* EMAuctionDetailStartDateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B8046F1B6434FE00B0CA47 /* EMAuctionDetailStartDateTableViewCell.m */; };
+		C0B804741B64351600B0CA47 /* EMAuctionDetailEndDateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804731B64351600B0CA47 /* EMAuctionDetailEndDateTableViewCell.m */; };
+		C0B804751B64351600B0CA47 /* EMAuctionDetailEndDateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804731B64351600B0CA47 /* EMAuctionDetailEndDateTableViewCell.m */; };
+		C0B804781B64353700B0CA47 /* EMAuctionDetailStartPriceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804771B64353700B0CA47 /* EMAuctionDetailStartPriceTableViewCell.m */; };
+		C0B804791B64353700B0CA47 /* EMAuctionDetailStartPriceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804771B64353700B0CA47 /* EMAuctionDetailStartPriceTableViewCell.m */; };
+		C0B8047C1B64356900B0CA47 /* EMAuctionDetailEndPriceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B8047B1B64356900B0CA47 /* EMAuctionDetailEndPriceTableViewCell.m */; };
+		C0B8047D1B64356900B0CA47 /* EMAuctionDetailEndPriceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B8047B1B64356900B0CA47 /* EMAuctionDetailEndPriceTableViewCell.m */; };
+		C0B804801B64359900B0CA47 /* EMAuctionDetailLocationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B8047F1B64359900B0CA47 /* EMAuctionDetailLocationTableViewCell.m */; };
+		C0B804811B64359900B0CA47 /* EMAuctionDetailLocationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B8047F1B64359900B0CA47 /* EMAuctionDetailLocationTableViewCell.m */; };
 		C0CA36001B49D99000725563 /* EMAuction.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CA35FF1B49D99000725563 /* EMAuction.m */; };
 		C0CA36011B49D99000725563 /* EMAuction.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CA35FF1B49D99000725563 /* EMAuction.m */; };
 		C0CA36041B49DB0600725563 /* EMComment.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CA36031B49DB0600725563 /* EMComment.m */; };
@@ -95,6 +123,34 @@
 		C0B804281B6426EE00B0CA47 /* EMCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMCategoryViewController.m; path = UI/Controllers/EMCategoryViewController.m; sourceTree = "<group>"; };
 		C0B8042B1B64274A00B0CA47 /* EMCommentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMCommentListViewController.h; path = UI/Controllers/EMCommentListViewController.h; sourceTree = "<group>"; };
 		C0B8042C1B64274A00B0CA47 /* EMCommentListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMCommentListViewController.m; path = UI/Controllers/EMCommentListViewController.m; sourceTree = "<group>"; };
+		C0B8044A1B6432D300B0CA47 /* EMCommentListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMCommentListTableViewCell.h; path = UI/Components/CommentListView/EMCommentListTableViewCell.h; sourceTree = "<group>"; };
+		C0B8044B1B6432D300B0CA47 /* EMCommentListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMCommentListTableViewCell.m; path = UI/Components/CommentListView/EMCommentListTableViewCell.m; sourceTree = "<group>"; };
+		C0B8044E1B6432FE00B0CA47 /* EMAuctionListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMAuctionListTableViewCell.h; path = UI/Components/AuctionListView/EMAuctionListTableViewCell.h; sourceTree = "<group>"; };
+		C0B8044F1B6432FE00B0CA47 /* EMAuctionListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMAuctionListTableViewCell.m; path = UI/Components/AuctionListView/EMAuctionListTableViewCell.m; sourceTree = "<group>"; };
+		C0B804521B64331A00B0CA47 /* EMBidListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMBidListTableViewCell.h; path = UI/Components/BidListView/EMBidListTableViewCell.h; sourceTree = "<group>"; };
+		C0B804531B64331A00B0CA47 /* EMBidListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMBidListTableViewCell.m; path = UI/Components/BidListView/EMBidListTableViewCell.m; sourceTree = "<group>"; };
+		C0B804561B6433AF00B0CA47 /* EMBidDetailPriceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMBidDetailPriceTableViewCell.h; path = UI/Components/BidDetailView/EMBidDetailPriceTableViewCell.h; sourceTree = "<group>"; };
+		C0B804571B6433AF00B0CA47 /* EMBidDetailPriceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMBidDetailPriceTableViewCell.m; path = UI/Components/BidDetailView/EMBidDetailPriceTableViewCell.m; sourceTree = "<group>"; };
+		C0B8045A1B6433D200B0CA47 /* EMBidDetailStatusTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMBidDetailStatusTableViewCell.h; path = UI/Components/BidDetailView/EMBidDetailStatusTableViewCell.h; sourceTree = "<group>"; };
+		C0B8045B1B6433D200B0CA47 /* EMBidDetailStatusTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMBidDetailStatusTableViewCell.m; path = UI/Components/BidDetailView/EMBidDetailStatusTableViewCell.m; sourceTree = "<group>"; };
+		C0B8045E1B64346E00B0CA47 /* EMAuctionDetailStatusTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMAuctionDetailStatusTableViewCell.h; path = UI/Components/AuctionDetailView/EMAuctionDetailStatusTableViewCell.h; sourceTree = "<group>"; };
+		C0B8045F1B64346E00B0CA47 /* EMAuctionDetailStatusTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMAuctionDetailStatusTableViewCell.m; path = UI/Components/AuctionDetailView/EMAuctionDetailStatusTableViewCell.m; sourceTree = "<group>"; };
+		C0B804621B64348C00B0CA47 /* EMAuctionDetailTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMAuctionDetailTitleTableViewCell.h; path = UI/Components/AuctionDetailView/EMAuctionDetailTitleTableViewCell.h; sourceTree = "<group>"; };
+		C0B804631B64348C00B0CA47 /* EMAuctionDetailTitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMAuctionDetailTitleTableViewCell.m; path = UI/Components/AuctionDetailView/EMAuctionDetailTitleTableViewCell.m; sourceTree = "<group>"; };
+		C0B804661B6434AB00B0CA47 /* EMAuctionDetailDescriptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMAuctionDetailDescriptionTableViewCell.h; path = UI/Components/AuctionDetailView/EMAuctionDetailDescriptionTableViewCell.h; sourceTree = "<group>"; };
+		C0B804671B6434AB00B0CA47 /* EMAuctionDetailDescriptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMAuctionDetailDescriptionTableViewCell.m; path = UI/Components/AuctionDetailView/EMAuctionDetailDescriptionTableViewCell.m; sourceTree = "<group>"; };
+		C0B8046A1B6434DC00B0CA47 /* EMAuctionDetailCategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMAuctionDetailCategoryTableViewCell.h; path = UI/Components/AuctionDetailView/EMAuctionDetailCategoryTableViewCell.h; sourceTree = "<group>"; };
+		C0B8046B1B6434DC00B0CA47 /* EMAuctionDetailCategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMAuctionDetailCategoryTableViewCell.m; path = UI/Components/AuctionDetailView/EMAuctionDetailCategoryTableViewCell.m; sourceTree = "<group>"; };
+		C0B8046E1B6434FE00B0CA47 /* EMAuctionDetailStartDateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMAuctionDetailStartDateTableViewCell.h; path = UI/Components/AuctionDetailView/EMAuctionDetailStartDateTableViewCell.h; sourceTree = "<group>"; };
+		C0B8046F1B6434FE00B0CA47 /* EMAuctionDetailStartDateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMAuctionDetailStartDateTableViewCell.m; path = UI/Components/AuctionDetailView/EMAuctionDetailStartDateTableViewCell.m; sourceTree = "<group>"; };
+		C0B804721B64351600B0CA47 /* EMAuctionDetailEndDateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMAuctionDetailEndDateTableViewCell.h; path = UI/Components/AuctionDetailView/EMAuctionDetailEndDateTableViewCell.h; sourceTree = "<group>"; };
+		C0B804731B64351600B0CA47 /* EMAuctionDetailEndDateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMAuctionDetailEndDateTableViewCell.m; path = UI/Components/AuctionDetailView/EMAuctionDetailEndDateTableViewCell.m; sourceTree = "<group>"; };
+		C0B804761B64353700B0CA47 /* EMAuctionDetailStartPriceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMAuctionDetailStartPriceTableViewCell.h; path = UI/Components/AuctionDetailView/EMAuctionDetailStartPriceTableViewCell.h; sourceTree = "<group>"; };
+		C0B804771B64353700B0CA47 /* EMAuctionDetailStartPriceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMAuctionDetailStartPriceTableViewCell.m; path = UI/Components/AuctionDetailView/EMAuctionDetailStartPriceTableViewCell.m; sourceTree = "<group>"; };
+		C0B8047A1B64356900B0CA47 /* EMAuctionDetailEndPriceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMAuctionDetailEndPriceTableViewCell.h; path = UI/Components/AuctionDetailView/EMAuctionDetailEndPriceTableViewCell.h; sourceTree = "<group>"; };
+		C0B8047B1B64356900B0CA47 /* EMAuctionDetailEndPriceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMAuctionDetailEndPriceTableViewCell.m; path = UI/Components/AuctionDetailView/EMAuctionDetailEndPriceTableViewCell.m; sourceTree = "<group>"; };
+		C0B8047E1B64359900B0CA47 /* EMAuctionDetailLocationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMAuctionDetailLocationTableViewCell.h; path = UI/Components/AuctionDetailView/EMAuctionDetailLocationTableViewCell.h; sourceTree = "<group>"; };
+		C0B8047F1B64359900B0CA47 /* EMAuctionDetailLocationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMAuctionDetailLocationTableViewCell.m; path = UI/Components/AuctionDetailView/EMAuctionDetailLocationTableViewCell.m; sourceTree = "<group>"; };
 		C0CA35FE1B49D99000725563 /* EMAuction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMAuction.h; path = Models/EMAuction.h; sourceTree = "<group>"; };
 		C0CA35FF1B49D99000725563 /* EMAuction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMAuction.m; path = Models/EMAuction.m; sourceTree = "<group>"; };
 		C0CA36021B49DB0600725563 /* EMComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMComment.h; path = Models/EMComment.h; sourceTree = "<group>"; };
@@ -267,8 +323,76 @@
 		C0B804101B64248D00B0CA47 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C0B804451B642DF200B0CA47 /* CommentListView */,
+				C0B8043F1B642D1500B0CA47 /* AuctionListView */,
+				C0B804421B642D6B00B0CA47 /* AuctionDetailView */,
+				C0B804411B642D4100B0CA47 /* BidListView */,
+				C0B804441B642DD800B0CA47 /* BidDetailView */,
 			);
 			name = Components;
+			sourceTree = "<group>";
+		};
+		C0B8043F1B642D1500B0CA47 /* AuctionListView */ = {
+			isa = PBXGroup;
+			children = (
+				C0B8044E1B6432FE00B0CA47 /* EMAuctionListTableViewCell.h */,
+				C0B8044F1B6432FE00B0CA47 /* EMAuctionListTableViewCell.m */,
+			);
+			name = AuctionListView;
+			sourceTree = "<group>";
+		};
+		C0B804411B642D4100B0CA47 /* BidListView */ = {
+			isa = PBXGroup;
+			children = (
+				C0B804521B64331A00B0CA47 /* EMBidListTableViewCell.h */,
+				C0B804531B64331A00B0CA47 /* EMBidListTableViewCell.m */,
+			);
+			name = BidListView;
+			sourceTree = "<group>";
+		};
+		C0B804421B642D6B00B0CA47 /* AuctionDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				C0B8045E1B64346E00B0CA47 /* EMAuctionDetailStatusTableViewCell.h */,
+				C0B8045F1B64346E00B0CA47 /* EMAuctionDetailStatusTableViewCell.m */,
+				C0B804621B64348C00B0CA47 /* EMAuctionDetailTitleTableViewCell.h */,
+				C0B804631B64348C00B0CA47 /* EMAuctionDetailTitleTableViewCell.m */,
+				C0B804661B6434AB00B0CA47 /* EMAuctionDetailDescriptionTableViewCell.h */,
+				C0B804671B6434AB00B0CA47 /* EMAuctionDetailDescriptionTableViewCell.m */,
+				C0B8046A1B6434DC00B0CA47 /* EMAuctionDetailCategoryTableViewCell.h */,
+				C0B8046B1B6434DC00B0CA47 /* EMAuctionDetailCategoryTableViewCell.m */,
+				C0B8046E1B6434FE00B0CA47 /* EMAuctionDetailStartDateTableViewCell.h */,
+				C0B8046F1B6434FE00B0CA47 /* EMAuctionDetailStartDateTableViewCell.m */,
+				C0B804721B64351600B0CA47 /* EMAuctionDetailEndDateTableViewCell.h */,
+				C0B804731B64351600B0CA47 /* EMAuctionDetailEndDateTableViewCell.m */,
+				C0B804761B64353700B0CA47 /* EMAuctionDetailStartPriceTableViewCell.h */,
+				C0B804771B64353700B0CA47 /* EMAuctionDetailStartPriceTableViewCell.m */,
+				C0B8047A1B64356900B0CA47 /* EMAuctionDetailEndPriceTableViewCell.h */,
+				C0B8047B1B64356900B0CA47 /* EMAuctionDetailEndPriceTableViewCell.m */,
+				C0B8047E1B64359900B0CA47 /* EMAuctionDetailLocationTableViewCell.h */,
+				C0B8047F1B64359900B0CA47 /* EMAuctionDetailLocationTableViewCell.m */,
+			);
+			name = AuctionDetailView;
+			sourceTree = "<group>";
+		};
+		C0B804441B642DD800B0CA47 /* BidDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				C0B804561B6433AF00B0CA47 /* EMBidDetailPriceTableViewCell.h */,
+				C0B804571B6433AF00B0CA47 /* EMBidDetailPriceTableViewCell.m */,
+				C0B8045A1B6433D200B0CA47 /* EMBidDetailStatusTableViewCell.h */,
+				C0B8045B1B6433D200B0CA47 /* EMBidDetailStatusTableViewCell.m */,
+			);
+			name = BidDetailView;
+			sourceTree = "<group>";
+		};
+		C0B804451B642DF200B0CA47 /* CommentListView */ = {
+			isa = PBXGroup;
+			children = (
+				C0B8044A1B6432D300B0CA47 /* EMCommentListTableViewCell.h */,
+				C0B8044B1B6432D300B0CA47 /* EMCommentListTableViewCell.m */,
+			);
+			name = CommentListView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,19 +530,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0B804581B6433AF00B0CA47 /* EMBidDetailPriceTableViewCell.m in Sources */,
 				C00138741B4396E2001EF6A9 /* ViewController.m in Sources */,
+				C0B804501B6432FE00B0CA47 /* EMAuctionListTableViewCell.m in Sources */,
 				C0B8041D1B64267700B0CA47 /* EMAuctionDetailViewController.m in Sources */,
 				C0B804251B6426DE00B0CA47 /* EMStatusViewController.m in Sources */,
+				C0B8045C1B6433D200B0CA47 /* EMBidDetailStatusTableViewCell.m in Sources */,
+				C0B804601B64346E00B0CA47 /* EMAuctionDetailStatusTableViewCell.m in Sources */,
+				C0B804781B64353700B0CA47 /* EMAuctionDetailStartPriceTableViewCell.m in Sources */,
 				C07F94201B50936100156FA0 /* EMAPIClient.m in Sources */,
+				C0B8044C1B6432D300B0CA47 /* EMCommentListTableViewCell.m in Sources */,
 				C00138711B4396E2001EF6A9 /* AppDelegate.m in Sources */,
+				C0B804641B64348C00B0CA47 /* EMAuctionDetailTitleTableViewCell.m in Sources */,
+				C0B804681B6434AB00B0CA47 /* EMAuctionDetailDescriptionTableViewCell.m in Sources */,
 				C0B804211B64268E00B0CA47 /* EMBidDetailViewController.m in Sources */,
 				C001386E1B4396E2001EF6A9 /* main.m in Sources */,
 				C0B804161B6425EC00B0CA47 /* EMAuctionListViewController.m in Sources */,
+				C0B804701B6434FE00B0CA47 /* EMAuctionDetailStartDateTableViewCell.m in Sources */,
+				C0B804541B64331A00B0CA47 /* EMBidListTableViewCell.m in Sources */,
 				C0B8042D1B64274A00B0CA47 /* EMCommentListViewController.m in Sources */,
 				C0CA36081B49DE1D00725563 /* EMBid.m in Sources */,
+				C0B8047C1B64356900B0CA47 /* EMAuctionDetailEndPriceTableViewCell.m in Sources */,
+				C0B804801B64359900B0CA47 /* EMAuctionDetailLocationTableViewCell.m in Sources */,
+				C0B8046C1B6434DC00B0CA47 /* EMAuctionDetailCategoryTableViewCell.m in Sources */,
 				C0B804291B6426EE00B0CA47 /* EMCategoryViewController.m in Sources */,
 				C0B804191B64260400B0CA47 /* EMBidListViewController.m in Sources */,
 				C097ABD21B49BF1F001ED5B8 /* EMBaseModel.m in Sources */,
+				C0B804741B64351600B0CA47 /* EMAuctionDetailEndDateTableViewCell.m in Sources */,
 				C097ABD61B49C17E001ED5B8 /* EMCategory.m in Sources */,
 				C0CA36001B49D99000725563 /* EMAuction.m in Sources */,
 				C0CA36041B49DB0600725563 /* EMComment.m in Sources */,
@@ -429,17 +567,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0B8044D1B6432D300B0CA47 /* EMCommentListTableViewCell.m in Sources */,
+				C0B804711B6434FE00B0CA47 /* EMAuctionDetailStartDateTableViewCell.m in Sources */,
 				C0B804221B64268E00B0CA47 /* EMBidDetailViewController.m in Sources */,
+				C0B804791B64353700B0CA47 /* EMAuctionDetailStartPriceTableViewCell.m in Sources */,
 				C0B8041A1B64260400B0CA47 /* EMBidListViewController.m in Sources */,
+				C0B804551B64331A00B0CA47 /* EMBidListTableViewCell.m in Sources */,
+				C0B804651B64348C00B0CA47 /* EMAuctionDetailTitleTableViewCell.m in Sources */,
 				C0B8042A1B6426EE00B0CA47 /* EMCategoryViewController.m in Sources */,
 				C00138881B4396E3001EF6A9 /* EmdibAppTests.m in Sources */,
+				C0B804691B6434AB00B0CA47 /* EMAuctionDetailDescriptionTableViewCell.m in Sources */,
 				C097ABD71B49C17E001ED5B8 /* EMCategory.m in Sources */,
 				C0B804261B6426DE00B0CA47 /* EMStatusViewController.m in Sources */,
+				C0B8045D1B6433D200B0CA47 /* EMBidDetailStatusTableViewCell.m in Sources */,
+				C0B804811B64359900B0CA47 /* EMAuctionDetailLocationTableViewCell.m in Sources */,
+				C0B8046D1B6434DC00B0CA47 /* EMAuctionDetailCategoryTableViewCell.m in Sources */,
 				C0B8042E1B64274A00B0CA47 /* EMCommentListViewController.m in Sources */,
 				C097ABD31B49BF1F001ED5B8 /* EMBaseModel.m in Sources */,
 				C07F94231B51DB4300156FA0 /* EMAPIClientTests.m in Sources */,
 				C0CA36091B49DE1D00725563 /* EMBid.m in Sources */,
+				C0B804511B6432FE00B0CA47 /* EMAuctionListTableViewCell.m in Sources */,
+				C0B804611B64346E00B0CA47 /* EMAuctionDetailStatusTableViewCell.m in Sources */,
 				C0CA36051B49DB0600725563 /* EMComment.m in Sources */,
+				C0B804751B64351600B0CA47 /* EMAuctionDetailEndDateTableViewCell.m in Sources */,
+				C0B8047D1B64356900B0CA47 /* EMAuctionDetailEndPriceTableViewCell.m in Sources */,
+				C0B804591B6433AF00B0CA47 /* EMBidDetailPriceTableViewCell.m in Sources */,
 				C0B8041E1B64267700B0CA47 /* EMAuctionDetailViewController.m in Sources */,
 				C0CA36011B49D99000725563 /* EMAuction.m in Sources */,
 				C07F94211B50936100156FA0 /* EMAPIClient.m in Sources */,
