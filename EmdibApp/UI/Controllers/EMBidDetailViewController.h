@@ -10,4 +10,6 @@
 
 @interface EMBidDetailViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *bidDetailTableView;
+
 @end

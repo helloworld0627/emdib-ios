@@ -10,4 +10,6 @@
 
 @interface EMAuctionDetailCategoryTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
+
 @end

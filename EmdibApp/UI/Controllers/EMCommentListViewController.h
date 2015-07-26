@@ -10,4 +10,6 @@
 
 @interface EMCommentListViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *commentListTableView;
+
 @end

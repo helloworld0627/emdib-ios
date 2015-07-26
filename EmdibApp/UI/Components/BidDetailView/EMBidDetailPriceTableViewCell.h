@@ -10,4 +10,6 @@
 
 @interface EMBidDetailPriceTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UITextField *priceLabel;
+
 @end

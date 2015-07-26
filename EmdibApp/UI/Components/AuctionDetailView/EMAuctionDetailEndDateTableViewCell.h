@@ -10,4 +10,6 @@
 
 @interface EMAuctionDetailEndDateTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *endDateLabel;
+
 @end

@@ -10,4 +10,6 @@
 
 @interface EMAuctionDetailStartPriceTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UITextField *startPriceTextField;
+
 @end

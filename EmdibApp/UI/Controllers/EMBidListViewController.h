@@ -10,4 +10,6 @@
 
 @interface EMBidListViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *bidListTableView;
+
 @end

@@ -10,4 +10,8 @@
 
 @interface EMBidListTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *thumbnailImageView;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+
 @end

@@ -10,4 +10,9 @@
 
 @interface EMCommentListTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *thumbnailImageView;
+@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
+@property (weak, nonatomic) IBOutlet UITextView *commentTextView;
+@property (weak, nonatomic) IBOutlet UIButton *submitButton;
+
 @end

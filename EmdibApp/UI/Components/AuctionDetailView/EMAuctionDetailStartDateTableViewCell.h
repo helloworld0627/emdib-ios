@@ -10,4 +10,6 @@
 
 @interface EMAuctionDetailStartDateTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *startDateLabel;
+
 @end

@@ -102,6 +102,12 @@
                                                 <constraint firstItem="tPg-Xn-hmQ" firstAttribute="top" secondItem="9nN-8k-Lst" secondAttribute="top" id="yBS-be-fyl"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="statusLabel" destination="GPK-7R-Wsf" id="yNM-sH-KXh"/>
+                                            <outlet property="thumbnailImageView" destination="tPg-Xn-hmQ" id="2Al-4T-13W"/>
+                                            <outlet property="timeLeftLabel" destination="g49-Yn-yVA" id="dYh-fR-CKg"/>
+                                            <outlet property="titleLabel" destination="VwB-N4-vV7" id="dda-As-h6U"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -109,6 +115,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="JMR-QV-N7c"/>
+                    <connections>
+                        <outlet property="auctionListTableView" destination="mSO-oW-otW" id="uhC-eU-UGT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -188,6 +197,12 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ToF-Pb-MbI" userLabel="Price Value Label">
+                                                    <rect key="frame" x="182" y="7" width="53" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ha7-fj-UoK" userLabel="Status Key Label">
                                                     <rect key="frame" x="96" y="37" width="75" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -206,20 +221,22 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ToF-Pb-MbI" userLabel="Price Value Label">
-                                                    <rect key="frame" x="182" y="7" width="53" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="priceLabel" destination="ToF-Pb-MbI" id="78v-lJ-UWm"/>
+                                            <outlet property="statusLabel" destination="36v-Fa-SsY" id="AD2-XR-Hdj"/>
+                                            <outlet property="thumbnailImageView" destination="ZRT-eo-Ebe" id="JrM-3N-oQ5"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="bidListTableView" destination="Hgn-fd-Bhk" id="OLk-3U-QPx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxT-ku-Wf8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -278,6 +295,9 @@
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="priceLabel" destination="KDt-yO-YZR" id="Xdy-x7-epx"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BidDetailStatusCell" id="pW2-0j-qTP" userLabel="Status Cell" customClass="EMBidDetailStatusTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -299,12 +319,18 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="statusLabel" destination="7lp-0P-hPS" id="TYa-1Q-qYZ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="bidDetailTableView" destination="xii-7R-Xjq" id="PFw-J7-vgI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j1t-zN-68Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -390,6 +416,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="kMv-D0-r5C" id="VuN-uD-SxN"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailDescCell" rowHeight="120" id="JG3-CS-fpH" userLabel="Description Cell" customClass="EMAuctionDetailDescriptionTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -403,7 +432,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SL8-X3-ILY" userLabel="Desc Value Label">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SL8-X3-ILY" userLabel="Desc Value TextView">
                                                     <rect key="frame" x="116" y="11" width="476" height="100"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -412,6 +441,9 @@
                                                 </textView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionTextView" destination="SL8-X3-ILY" id="3mX-Ms-9Mq"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailCategoryCell" id="CDC-0F-XU0" userLabel="Category Cell" customClass="EMAuctionDetailCategoryTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -433,6 +465,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="categoryLabel" destination="4kq-ty-Yu7" id="ZzI-IT-w4R"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailStatusCell" id="uvh-ph-Wvz" userLabel="Status Cell" customClass="EMAuctionDetailStatusTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -454,6 +489,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="statusLabel" destination="GDi-F5-X5B" id="ay5-D3-oUH"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailStartDateCell" id="QSM-Bg-Ruh" userLabel="StartDate Cell" customClass="EMAuctionDetailStartDateTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -475,6 +513,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="startDateLabel" destination="cZi-7U-1Xv" id="syH-xZ-uwB"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailEndDateCell" id="3gj-i2-fNi" userLabel="EndDate Cell" customClass="EMAuctionDetailEndDateTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -496,6 +537,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="endDateLabel" destination="S9Y-cw-a4L" id="SxG-b2-8bU"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailStartPriceCell" id="HGO-Xa-rgY" userLabel="StartPrice Cell" customClass="EMAuctionDetailStartPriceTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -522,6 +566,9 @@
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="startPriceTextField" destination="fkf-f3-m0E" id="FSO-i3-zsY"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailEndPriceCell" id="Ni3-pd-A2u" userLabel="EndPrice Cell" customClass="EMAuctionDetailEndPriceTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -548,12 +595,18 @@
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="endPriceTextField" destination="Sb0-Wr-RAQ" id="RrQ-bg-iI1"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="auctionDetailTableView" destination="aPB-fh-ewb" id="SGC-8E-6dX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CwI-fi-heP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -601,13 +654,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="yJe-2w-CAe" userLabel="Comment Cell">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="EMCommentListCell" selectionStyle="default" indentationWidth="10" rowHeight="150" id="yJe-2w-CAe" userLabel="Comment Cell" customClass="EMCommentListTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yJe-2w-CAe" id="ywg-2u-j1i">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WcS-mF-fZW" userLabel="Profile Image View">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WcS-mF-fZW" userLabel="Thumbnail Image View">
                                                     <rect key="frame" x="18" y="8" width="100" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="rTe-tC-0fP"/>
@@ -650,6 +703,12 @@
                                                 <constraint firstItem="WcS-mF-fZW" firstAttribute="top" secondItem="ywg-2u-j1i" secondAttribute="topMargin" id="taK-qU-Kls"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentTextView" destination="QD6-sU-tyI" id="Eei-jh-Ybd"/>
+                                            <outlet property="submitButton" destination="ujU-Ox-LF0" id="IeG-vT-tnA"/>
+                                            <outlet property="thumbnailImageView" destination="WcS-mF-fZW" id="BW7-W6-bDG"/>
+                                            <outlet property="userNameLabel" destination="NvG-TM-f7L" id="pQr-gh-TQF"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -664,6 +723,9 @@
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="commentListTableView" destination="ItP-5w-nf4" id="3WR-6A-1ri"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S7Q-Oh-ron" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

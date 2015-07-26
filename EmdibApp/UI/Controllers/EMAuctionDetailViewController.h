@@ -10,4 +10,6 @@
 
 @interface EMAuctionDetailViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *auctionDetailTableView;
+
 @end

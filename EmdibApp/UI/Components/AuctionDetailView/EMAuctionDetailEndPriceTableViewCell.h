@@ -10,4 +10,6 @@
 
 @interface EMAuctionDetailEndPriceTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UITextField *endPriceTextField;
+
 @end

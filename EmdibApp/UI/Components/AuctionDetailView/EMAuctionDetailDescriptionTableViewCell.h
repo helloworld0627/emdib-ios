@@ -10,4 +10,6 @@
 
 @interface EMAuctionDetailDescriptionTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
+
 @end

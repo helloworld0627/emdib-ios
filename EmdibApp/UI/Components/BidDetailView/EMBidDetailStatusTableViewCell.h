@@ -10,4 +10,6 @@
 
 @interface EMBidDetailStatusTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+
 @end
