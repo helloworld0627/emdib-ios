@@ -7,10 +7,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--List Item-->
+        <!--Auction List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="List Item" customClass="EMAuctionListViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Auction List View Controller" customClass="EMAuctionListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -110,6 +110,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="f19-ve-mHF"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="35I-Zv-oiP"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -230,6 +234,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ry0-x7-kfl" id="S3J-g9-0aT"/>
+                                    <outlet property="delegate" destination="Ry0-x7-kfl" id="qOw-qt-6xI"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -324,6 +332,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2z8-O3-ndU" id="Rd3-rb-d20"/>
+                                    <outlet property="delegate" destination="2z8-O3-ndU" id="5aP-GV-gBc"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -600,6 +612,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ri7-ZG-btk" id="Ep9-IV-OjB"/>
+                                    <outlet property="delegate" destination="ri7-ZG-btk" id="C4r-Gz-498"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -711,6 +727,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="GSm-Rt-h3L" id="W4C-Ik-itF"/>
+                                    <outlet property="delegate" destination="GSm-Rt-h3L" id="Gdh-2g-yep"/>
+                                </connections>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m3L-Qd-iNA">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
