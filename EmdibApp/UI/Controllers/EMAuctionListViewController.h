@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EMAuctionListViewController : UIViewController
+@interface EMAuctionListViewController : UIViewController<UITableViewDataSource, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *auctionListTableView;
 
