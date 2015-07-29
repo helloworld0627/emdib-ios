@@ -44,7 +44,10 @@ static EMAPIClient* apiClient = nil;
 
 -(instancetype)init {
     if(self = [super init]) {
+        NSString *token = @"CAACEdEose0cBAFnZBfAcml59eboQWid9jahwDN746LtTdPmKN3SSFPQ8TPJd0n5XVQYkZAZCey2kVnfcfljqkf2WNiSR7IhjAXY0G3GriUQFhG3kjIMLBxdOWX5GZBjrgW7tVeLZB1rDPL1GXptswMsQR78qIREvKMeOTXc53F4DPwWCZCa0ZBjRdQZBlSRqjedtFElL2GNWriLc9WBqmaq1";
         httpSessionManager = [AFHTTPSessionManager manager];
+        httpSessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
+        [httpSessionManager.requestSerializer setValue:[NSString stringWithFormat:@"Token token=\"%@\"", token] forHTTPHeaderField:@"Authorization"];
     }
     return self;
 }
