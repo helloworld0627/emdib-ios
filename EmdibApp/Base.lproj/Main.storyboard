@@ -108,6 +108,7 @@
                                             <outlet property="thumbnailImageView" destination="tPg-Xn-hmQ" id="2Al-4T-13W"/>
                                             <outlet property="timeLeftLabel" destination="g49-Yn-yVA" id="dYh-fR-CKg"/>
                                             <outlet property="titleLabel" destination="VwB-N4-vV7" id="dda-As-h6U"/>
+                                            <segue destination="ri7-ZG-btk" kind="showDetail" identifier="AuctionDetailSegue" id="n8O-M3-NjM"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
