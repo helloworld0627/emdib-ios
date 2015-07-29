@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EMAuction+MKAnnotation.h"
 
-@interface EMAuctionDetailViewController : UIViewController
+@interface EMAuctionDetailViewController : UIViewController<UITableViewDataSource, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *auctionDetailTableView;
+@property (strong, nonatomic) EMAuction *selectedAuction;
 
 @end
