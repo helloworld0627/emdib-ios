@@ -16,6 +16,7 @@
 #import "EMAuctionDetailEndPriceTableViewCell.h"
 #import "EMAuctionDetailLocationTableViewCell.h"
 #import "EMAuctionDetailStatusTableViewCell.h"
+#import "EMAPIClient.h"
 
 static NSString * const MAP_CELL_ID = @"AuctionDetailMapCell";
 static NSString * const TITLE_CELL_ID = @"AuctionDetailTitleCell";
@@ -35,7 +36,7 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -75,7 +76,12 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
 
     } else if ([CATEGORY_CELL_ID isEqualToString:cellIdentifier]) {
         EMAuctionDetailCategoryTableViewCell *cell = (EMAuctionDetailCategoryTableViewCell*)tableViewCell;
-        cell.categoryLabel.text = @"asdf";
+        for (EMCategory *c in self.categories) {
+            if ([c.modelId isEqualToNumber:self.selectedAuction.categoryId]) {
+                cell.categoryLabel.text = c.name;
+                break;
+            }
+        }
         return cell;
 
     } else if ([STATUS_CELL_ID isEqualToString:cellIdentifier]) {
@@ -102,6 +108,7 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
         EMAuctionDetailEndPriceTableViewCell *cell = (EMAuctionDetailEndPriceTableViewCell*)tableViewCell;
         cell.endPriceTextField.text = [[NSString alloc] initWithFormat:@"%.02f", self.selectedAuction.endPrice.doubleValue];
         return cell;
+
     } else if ([MAP_CELL_ID isEqualToString:cellIdentifier]) {
         EMAuctionDetailLocationTableViewCell *cell = (EMAuctionDetailLocationTableViewCell*)tableViewCell;
         [cell.mapView addAnnotation:self.selectedAuction];

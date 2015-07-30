@@ -13,5 +13,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *auctionDetailTableView;
 @property (strong, nonatomic) EMAuction *selectedAuction;
+@property (nonatomic, strong) NSArray *categories;
 
 @end

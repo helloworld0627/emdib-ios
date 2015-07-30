@@ -14,6 +14,7 @@
 @interface EMAuctionListViewController ()
 
 @property (nonatomic, strong) NSArray *auctions;
+@property (nonatomic, strong) NSArray *categories;
 
 @end
 
@@ -21,6 +22,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[EMAPIClient sharedAPIClient] fetchAllCategoriesOnCompletion:^(NSArray *categories, NSError *error) {
+        if (error) {
+            NSLog(@"%@", error.localizedDescription);
+            return;
+        }
+        self.categories = categories;
+    }];
     [[EMAPIClient sharedAPIClient] fetchAuctionsAsSellerOnCompletion:^(NSArray *auctions, NSError *error) {
         if (error) {
             NSLog(@"%@", error.localizedDescription);
@@ -82,6 +90,7 @@
         EMAuction *selectedAuction = [self.auctions objectAtIndex:idx];
         EMAuctionDetailViewController *controller = segue.destinationViewController;
         controller.selectedAuction = selectedAuction;
+        controller.categories = self.categories;
     }
 }
 
