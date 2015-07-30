@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ry0-x7-kfl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LqC-UQ-Tnf">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -20,10 +20,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mSO-oW-otW" userLabel="Auction List">
-                                <rect key="frame" x="0.0" y="20" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionListItem" rowHeight="88" id="SRY-SG-O5h" userLabel="Auction List Item" customClass="EMAuctionListTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AuctionListItem" rowHeight="88" id="SRY-SG-O5h" userLabel="Auction List Item" customClass="EMAuctionListTableViewCell">
                                         <rect key="frame" x="140" y="278" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SRY-SG-O5h" id="9nN-8k-Lst">
@@ -108,7 +108,7 @@
                                             <outlet property="thumbnailImageView" destination="tPg-Xn-hmQ" id="2Al-4T-13W"/>
                                             <outlet property="timeLeftLabel" destination="g49-Yn-yVA" id="dYh-fR-CKg"/>
                                             <outlet property="titleLabel" destination="VwB-N4-vV7" id="dda-As-h6U"/>
-                                            <segue destination="ri7-ZG-btk" kind="showDetail" identifier="AuctionDetailSegue" id="n8O-M3-NjM"/>
+                                            <segue destination="ri7-ZG-btk" kind="show" identifier="AuctionDetailSegue" id="n8O-M3-NjM"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -120,7 +120,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="JMR-QV-N7c"/>
+                    <navigationItem key="navigationItem" title="Auctions" id="ysR-jW-gip">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="TAC-Yp-wUK"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="auctionListTableView" destination="mSO-oW-otW" id="uhC-eU-UGT"/>
                     </connections>
@@ -335,7 +337,7 @@
         <scene sceneID="7HG-Hm-kA8">
             <objects>
                 <tableViewController id="gxJ-yG-aOc" customClass="EMStatusViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="MTw-Yu-jJz" userLabel="Status List" customClass="EMs">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="MTw-Yu-jJz" userLabel="Status List">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -355,9 +357,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tq9-ft-N23" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2272" y="-1604"/>
+            <point key="canvasLocation" x="-2134" y="-1604"/>
         </scene>
-        <!--Auction Detail View Controller-->
+        <!--Auction Details-->
         <scene sceneID="Ky3-Nv-gY1">
             <objects>
                 <viewController id="ri7-ZG-btk" customClass="EMAuctionDetailViewController" sceneMemberID="viewController">
@@ -369,9 +371,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="aPB-fh-ewb" userLabel="Auction Detail">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="aPB-fh-ewb" userLabel="Auction Detail">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailMapCell" rowHeight="120" id="VbX-ma-FYp" userLabel="Map Cell" customClass="EMAuctionDetailLocationTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -467,7 +469,7 @@
                                             <outlet property="categoryLabel" destination="4kq-ty-Yu7" id="ZzI-IT-w4R"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailStatusCell" id="uvh-ph-Wvz" userLabel="Status Cell" customClass="EMAuctionDetailStatusTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AuctionDetailStatusCell" id="uvh-ph-Wvz" userLabel="Status Cell" customClass="EMAuctionDetailStatusTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uvh-ph-Wvz" id="odj-0X-FDG">
@@ -489,6 +491,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="statusLabel" destination="GDi-F5-X5B" id="ay5-D3-oUH"/>
+                                            <segue destination="gxJ-yG-aOc" kind="show" id="Wra-Va-4ah"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailStartDateCell" id="QSM-Bg-Ruh" userLabel="StartDate Cell" customClass="EMAuctionDetailStartDateTableViewCell">
@@ -606,13 +609,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Auction Details" id="zq6-Nv-2qC">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Kip-Iz-fmp"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="auctionDetailTableView" destination="aPB-fh-ewb" id="SGC-8E-6dX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CwI-fi-heP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2913" y="-946"/>
+            <point key="canvasLocation" x="-2913" y="-938"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="Tr5-jD-mAz">
@@ -638,7 +644,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPt-Ho-Ncc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2272" y="-946"/>
+            <point key="canvasLocation" x="-2134" y="-938"/>
         </scene>
         <!--Comment List View Controller-->
         <scene sceneID="q7m-ox-LEq">
@@ -736,6 +742,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S7Q-Oh-ron" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2913" y="-254"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="EAJ-U0-uXC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LqC-UQ-Tnf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="JMR-QV-N7c"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="usy-SI-aKX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dNc-xa-5wY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U2S-2i-7mR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4355" y="-938"/>
         </scene>
     </scenes>
 </document>
