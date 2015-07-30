@@ -18,7 +18,7 @@ typedef enum : NSUInteger {
 
 @interface EMAuction : EMBaseModel
 
-@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *auctionTitle;
 @property (nonatomic, strong) NSString *desc;
 @property (nonatomic) AuctionStatus status;
 

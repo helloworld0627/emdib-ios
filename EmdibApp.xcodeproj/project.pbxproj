@@ -23,6 +23,8 @@
 		C097ABD31B49BF1F001ED5B8 /* EMBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C097ABD11B49BF1F001ED5B8 /* EMBaseModel.m */; };
 		C097ABD61B49C17E001ED5B8 /* EMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C097ABD51B49C17E001ED5B8 /* EMCategory.m */; };
 		C097ABD71B49C17E001ED5B8 /* EMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C097ABD51B49C17E001ED5B8 /* EMCategory.m */; };
+		C09AEABA1B69BC8C00BFC494 /* EMAuction+MKAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C09AEAB91B69BC8C00BFC494 /* EMAuction+MKAnnotation.m */; };
+		C09AEABB1B69BC8C00BFC494 /* EMAuction+MKAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C09AEAB91B69BC8C00BFC494 /* EMAuction+MKAnnotation.m */; };
 		C0B804161B6425EC00B0CA47 /* EMAuctionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804151B6425EC00B0CA47 /* EMAuctionListViewController.m */; };
 		C0B804191B64260400B0CA47 /* EMBidListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804181B64260400B0CA47 /* EMBidListViewController.m */; };
 		C0B8041A1B64260400B0CA47 /* EMBidListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804181B64260400B0CA47 /* EMBidListViewController.m */; };
@@ -109,6 +111,8 @@
 		C097ABD11B49BF1F001ED5B8 /* EMBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMBaseModel.m; path = Models/EMBaseModel.m; sourceTree = "<group>"; };
 		C097ABD41B49C17E001ED5B8 /* EMCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMCategory.h; path = Models/EMCategory.h; sourceTree = "<group>"; };
 		C097ABD51B49C17E001ED5B8 /* EMCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMCategory.m; path = Models/EMCategory.m; sourceTree = "<group>"; };
+		C09AEAB81B69BC8C00BFC494 /* EMAuction+MKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EMAuction+MKAnnotation.h"; path = "Models/EMAuction+MKAnnotation.h"; sourceTree = "<group>"; };
+		C09AEAB91B69BC8C00BFC494 /* EMAuction+MKAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "EMAuction+MKAnnotation.m"; path = "Models/EMAuction+MKAnnotation.m"; sourceTree = "<group>"; };
 		C0B804141B6425EC00B0CA47 /* EMAuctionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMAuctionListViewController.h; path = UI/Controllers/EMAuctionListViewController.h; sourceTree = "<group>"; };
 		C0B804151B6425EC00B0CA47 /* EMAuctionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMAuctionListViewController.m; path = UI/Controllers/EMAuctionListViewController.m; sourceTree = "<group>"; };
 		C0B804171B64260400B0CA47 /* EMBidListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMBidListViewController.h; path = UI/Controllers/EMBidListViewController.h; sourceTree = "<group>"; };
@@ -286,6 +290,8 @@
 				C0CA36031B49DB0600725563 /* EMComment.m */,
 				C0CA36061B49DE1D00725563 /* EMBid.h */,
 				C0CA36071B49DE1D00725563 /* EMBid.m */,
+				C09AEAB81B69BC8C00BFC494 /* EMAuction+MKAnnotation.h */,
+				C09AEAB91B69BC8C00BFC494 /* EMAuction+MKAnnotation.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -543,6 +549,7 @@
 				C00138711B4396E2001EF6A9 /* AppDelegate.m in Sources */,
 				C0B804641B64348C00B0CA47 /* EMAuctionDetailTitleTableViewCell.m in Sources */,
 				C0B804681B6434AB00B0CA47 /* EMAuctionDetailDescriptionTableViewCell.m in Sources */,
+				C09AEABA1B69BC8C00BFC494 /* EMAuction+MKAnnotation.m in Sources */,
 				C0B804211B64268E00B0CA47 /* EMBidDetailViewController.m in Sources */,
 				C001386E1B4396E2001EF6A9 /* main.m in Sources */,
 				C0B804161B6425EC00B0CA47 /* EMAuctionListViewController.m in Sources */,
@@ -592,6 +599,7 @@
 				C0B804751B64351600B0CA47 /* EMAuctionDetailEndDateTableViewCell.m in Sources */,
 				C0B8047D1B64356900B0CA47 /* EMAuctionDetailEndPriceTableViewCell.m in Sources */,
 				C0B804591B6433AF00B0CA47 /* EMBidDetailPriceTableViewCell.m in Sources */,
+				C09AEABB1B69BC8C00BFC494 /* EMAuction+MKAnnotation.m in Sources */,
 				C0B8041E1B64267700B0CA47 /* EMAuctionDetailViewController.m in Sources */,
 				C0CA36011B49D99000725563 /* EMAuction.m in Sources */,
 				C07F94211B50936100156FA0 /* EMAPIClient.m in Sources */,
@@ -666,7 +674,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos8.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -702,7 +710,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos8.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};

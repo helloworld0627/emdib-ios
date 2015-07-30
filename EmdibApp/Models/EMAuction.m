@@ -14,7 +14,7 @@
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     NSDictionary *parentDict = [super JSONKeyPathsByPropertyKey];
     return [parentDict mtl_dictionaryByAddingEntriesFromDictionary: @{
-             @"title": @"auction_title",
+             @"auctionTitle": @"auction_title",
              @"status": @"auction_status",
              @"desc": @"auction_desc",
              @"startPrice": @"auction_start_price",
