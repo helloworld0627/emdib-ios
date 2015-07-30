@@ -7,8 +7,12 @@
 //
 
 #import "EMCategoryViewController.h"
+#import "EMCategory.h"
+#import "EMAPIClient.h"
 
 @interface EMCategoryViewController ()
+
+@property (nonatomic, strong) NSArray *categories;
 
 @end
 
@@ -16,13 +20,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [[EMAPIClient sharedAPIClient] fetchAllCategoriesOnCompletion:^(NSArray *categories, NSError *error) {
+        if (error) {
+            NSLog(@"%@", error.localizedDescription);
+            return;
+        }
+        self.categories = categories;
+        [self.tableView reloadData];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.categories.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellIdentifier = @"EMCategoryListTableCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+
+    EMCategory *category = self.categories[indexPath.row];
+    cell.textLabel.text = category.name;
+    return cell;
+}
+
 
 /*
 #pragma mark - Navigation
