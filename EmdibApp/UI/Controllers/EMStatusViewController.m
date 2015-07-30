@@ -7,6 +7,7 @@
 //
 
 #import "EMStatusViewController.h"
+#import "EMAuction.h"
 
 @interface EMStatusViewController ()
 
@@ -23,6 +24,26 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return AuctionStatusCount;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellIdentifier = @"EMAuctionStatusListTableCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+
+    NSString *status = [EMAuction stringFromAuctionStatus:indexPath.row];
+    cell.textLabel.text = status;
+    return cell;
+}
+
 
 /*
 #pragma mark - Navigation
