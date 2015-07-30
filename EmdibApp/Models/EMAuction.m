@@ -56,6 +56,8 @@
         case AuctionStatusCancel:
             val = @"Cancel";
             break;
+        default:
+            break;
     }
     return val;
 }

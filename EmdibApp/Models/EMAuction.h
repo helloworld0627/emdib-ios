@@ -13,6 +13,7 @@ typedef enum : NSUInteger {
     AuctionStatusBegin,
     AuctionStatusEnd,
     AuctionStatusCancel,
+    AuctionStatusCount,
 } AuctionStatus;
 
 
