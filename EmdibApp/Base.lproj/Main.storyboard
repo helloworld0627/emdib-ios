@@ -409,6 +409,9 @@
                                                 </mapView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="mapView" destination="XI4-K5-FHD" id="lyl-mD-cWI"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailTitleCell" id="6eH-ba-LO6" userLabel="Title Cell" customClass="EMAuctionDetailTitleTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@import MapKit;
 
 @interface EMAuctionDetailLocationTableViewCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
