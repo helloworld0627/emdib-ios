@@ -42,6 +42,7 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -129,6 +130,35 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
     } else {
         return 44;
     }
+}
+
+#pragma mark - pop up actions
+
+- (IBAction)presentRightBarItemActionController:(id)sender {
+    UIAlertController *optionMenu = [UIAlertController alertControllerWithTitle:nil
+                                                                        message:nil
+                                                                 preferredStyle: UIAlertControllerStyleActionSheet];
+    UIAlertAction *saveAction = [UIAlertAction actionWithTitle:@"Save Auction Details"
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction *action) {
+                                                       }];
+    UIAlertAction *commentAction = [UIAlertAction actionWithTitle:@"Comments"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction *action) {
+                                                          }];
+    UIAlertAction *bidAction = [UIAlertAction actionWithTitle:@"Bids"
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:^(UIAlertAction *action) {
+                                                      }];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel"
+                                                           style:UIAlertActionStyleCancel
+                                                         handler:^(UIAlertAction *action) {
+                                                         }];
+    [optionMenu addAction:saveAction];
+    [optionMenu addAction:commentAction];
+    [optionMenu addAction:bidAction];
+    [optionMenu addAction:cancelAction];
+    [self presentViewController:optionMenu animated:YES completion:nil];
 }
 
 

@@ -11,6 +11,7 @@
 
 @interface EMAuctionDetailViewController : UIViewController<UITableViewDataSource, UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *barActionButtonItem;
 @property (weak, nonatomic) IBOutlet UITableView *auctionDetailTableView;
 @property (strong, nonatomic) EMAuction *selectedAuction;
 @property (nonatomic, strong) NSArray *categories;

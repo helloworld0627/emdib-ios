@@ -612,9 +612,15 @@
                     </view>
                     <navigationItem key="navigationItem" title="Auction Details" id="zq6-Nv-2qC">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Kip-Iz-fmp"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="yO6-1t-gwx">
+                            <connections>
+                                <action selector="presentRightBarItemActionController:" destination="ri7-ZG-btk" id="kqv-Zx-Jtn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="auctionDetailTableView" destination="aPB-fh-ewb" id="SGC-8E-6dX"/>
+                        <outlet property="barActionButtonItem" destination="yO6-1t-gwx" id="SGX-f2-OUf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CwI-fi-heP" userLabel="First Responder" sceneMemberID="firstResponder"/>
