@@ -16,6 +16,7 @@
 #import "EMAuctionDetailEndPriceTableViewCell.h"
 #import "EMAuctionDetailLocationTableViewCell.h"
 #import "EMAuctionDetailStatusTableViewCell.h"
+#import "EMCommentListViewController.h"
 #import "EMAPIClient.h"
 
 static NSString * const MAP_CELL_ID = @"AuctionDetailMapCell";
@@ -145,6 +146,9 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
     UIAlertAction *commentAction = [UIAlertAction actionWithTitle:@"Comments"
                                                             style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction *action) {
+                                                              EMCommentListViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"CommentListView"];
+                                                              controller.auction = self.selectedAuction;
+                                                              [self.navigationController pushViewController:controller animated:YES];
                                                           }];
     UIAlertAction *bidAction = [UIAlertAction actionWithTitle:@"Bids"
                                                         style:UIAlertActionStyleDefault
