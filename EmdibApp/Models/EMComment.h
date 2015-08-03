@@ -12,7 +12,7 @@
 @interface EMComment : EMBaseModel
 
 @property (nonatomic, strong) NSString *content;
-@property (nonatomic, strong) NSString *userId;
+@property (nonatomic, strong) NSNumber *userId;
 @property (nonatomic, strong, readonly) NSNumber *auctionId;
 
 @end
