@@ -20,4 +20,21 @@
     // Configure the view for the selected state
 }
 
+- (void)setMode:(EMCommentListTableViewCellMode)mode {
+    _mode = mode;
+    BOOL hidden =(EMCommentListTableViewCellModeRead == mode);
+    self.submitButton.hidden = hidden;
+    self.cancelButton.hidden = hidden;
+}
+
+- (IBAction)submitComment:(id)sender {
+    [self.delegate onCommentSubmitted];
+    self.mode = EMCommentListTableViewCellModeRead;
+}
+
+- (IBAction)cancelComment:(id)sender {
+    [self.delegate onCommentCancelled];
+    self.mode = EMCommentListTableViewCellModeRead;
+}
+
 @end

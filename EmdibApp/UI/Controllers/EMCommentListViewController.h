@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EMCommentListTableViewCell.h"
 #import "EMAuction.h"
 #import "EMComment.h"
 
-@interface EMCommentListViewController : UIViewController
+@interface EMCommentListViewController : UIViewController<EMCommentListTableViewCellDelegate, UITableViewDataSource, UITableViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addCommentBarButton;
 @property (weak, nonatomic) IBOutlet UITableView *commentListTableView;
 @property (strong, nonatomic) EMAuction *auction;
 @property (strong, nonatomic) NSArray *comments;

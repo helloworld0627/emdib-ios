@@ -13,6 +13,6 @@
 
 @property (nonatomic, strong) NSString *content;
 @property (nonatomic, strong) NSNumber *userId;
-@property (nonatomic, strong, readonly) NSNumber *auctionId;
+@property (nonatomic, strong) NSNumber *auctionId;
 
 @end

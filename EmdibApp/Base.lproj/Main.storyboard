@@ -680,7 +680,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="500" id="E2Z-ms-fk1"/>
                                                     </constraints>
-                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
@@ -693,6 +693,9 @@
                                                     <state key="normal" title="submit">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="submitComment:" destination="yJe-2w-CAe" eventType="touchUpInside" id="lvc-fC-7yk"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="guest12312" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="NvG-TM-f7L" userLabel="UserName Label">
                                                     <rect key="frame" x="8" y="67" width="60" height="21"/>
@@ -703,11 +706,21 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVr-CL-D9v" userLabel="Cancel Button">
+                                                    <rect key="frame" x="131" y="63" width="45" height="30"/>
+                                                    <state key="normal" title="cancel">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="cancelComment:" destination="yJe-2w-CAe" eventType="touchUpInside" id="THT-V5-TkV"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="QD6-sU-tyI" firstAttribute="bottom" secondItem="WcS-mF-fZW" secondAttribute="bottom" id="4N8-d9-STu"/>
                                                 <constraint firstItem="ujU-Ox-LF0" firstAttribute="top" secondItem="QD6-sU-tyI" secondAttribute="bottom" constant="-5" id="5DS-cO-HxD"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="NvG-TM-f7L" secondAttribute="bottom" constant="3.5" id="Anl-H7-tuH"/>
+                                                <constraint firstItem="EVr-CL-D9v" firstAttribute="leading" secondItem="ujU-Ox-LF0" secondAttribute="trailing" constant="8" symbolic="YES" id="Cm6-qY-Owv"/>
                                                 <constraint firstItem="ujU-Ox-LF0" firstAttribute="leading" secondItem="NvG-TM-f7L" secondAttribute="trailing" constant="8" symbolic="YES" id="CpQ-W9-rF3"/>
                                                 <constraint firstItem="NvG-TM-f7L" firstAttribute="top" secondItem="ywg-2u-j1i" secondAttribute="topMargin" constant="59" id="EwT-7l-4Us"/>
                                                 <constraint firstItem="QD6-sU-tyI" firstAttribute="leading" secondItem="WcS-mF-fZW" secondAttribute="trailing" constant="8" id="G8q-jk-qX4"/>
@@ -718,10 +731,12 @@
                                                 <constraint firstItem="NvG-TM-f7L" firstAttribute="leading" secondItem="ywg-2u-j1i" secondAttribute="leadingMargin" id="V5b-Ah-rPJ"/>
                                                 <constraint firstItem="WcS-mF-fZW" firstAttribute="leading" secondItem="ywg-2u-j1i" secondAttribute="leadingMargin" id="WVz-VT-HHH"/>
                                                 <constraint firstItem="QD6-sU-tyI" firstAttribute="top" secondItem="WcS-mF-fZW" secondAttribute="top" id="hcA-Nb-TcS"/>
+                                                <constraint firstItem="EVr-CL-D9v" firstAttribute="baseline" secondItem="ujU-Ox-LF0" secondAttribute="baseline" id="iG2-DX-3Kx"/>
                                                 <constraint firstItem="QD6-sU-tyI" firstAttribute="leading" secondItem="NvG-TM-f7L" secondAttribute="trailing" constant="8" symbolic="YES" id="mBj-cv-fNg"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cancelButton" destination="EVr-CL-D9v" id="Neb-Au-XWE"/>
                                             <outlet property="commentTextView" destination="QD6-sU-tyI" id="Eei-jh-Ybd"/>
                                             <outlet property="submitButton" destination="ujU-Ox-LF0" id="IeG-vT-tnA"/>
                                             <outlet property="thumbnailImageView" destination="WcS-mF-fZW" id="BW7-W6-bDG"/>
@@ -738,9 +753,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Comments" id="gkq-Jn-tQi"/>
+                    <navigationItem key="navigationItem" title="Comments" id="gkq-Jn-tQi">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="biC-Qi-4At" userLabel="Add Comment Item">
+                            <connections>
+                                <action selector="presentRightBarItemActionController:" destination="GSm-Rt-h3L" id="Cta-Q5-prm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addCommentBarButton" destination="biC-Qi-4At" id="ILT-Ax-yeN"/>
                         <outlet property="commentListTableView" destination="0ge-08-TPQ" id="5KF-6Y-yHx"/>
                     </connections>
                 </viewController>
