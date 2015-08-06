@@ -44,7 +44,7 @@ static EMAPIClient* apiClient = nil;
 
 -(instancetype)init {
     if(self = [super init]) {
-        NSString *token = @"CAACEdEose0cBAFnZBfAcml59eboQWid9jahwDN746LtTdPmKN3SSFPQ8TPJd0n5XVQYkZAZCey2kVnfcfljqkf2WNiSR7IhjAXY0G3GriUQFhG3kjIMLBxdOWX5GZBjrgW7tVeLZB1rDPL1GXptswMsQR78qIREvKMeOTXc53F4DPwWCZCa0ZBjRdQZBlSRqjedtFElL2GNWriLc9WBqmaq1";
+        NSString *token = @"CAACEdEose0cBADR3n5mR3NrqxxSFZAs5d23Jaae6KbN73u1fLGRmV3n7Gq3grfEusg9Azd0nrYBaB3WsnTJcnTlcJB7gwwIEMKCJinefY1HHOCjIDw3EhF2kd992ZCe2nIhuyVQtvqIu3OFjikFg7n5iiY27KZBBYt2IxhBRhjpE6sRcZA7OyuM1R8Qv6ofro0aqfKhu7MP4XEPTNh8l";
         httpSessionManager = [AFHTTPSessionManager manager];
         httpSessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
         [httpSessionManager.requestSerializer setValue:[NSString stringWithFormat:@"Token token=\"%@\"", token] forHTTPHeaderField:@"Authorization"];
@@ -99,8 +99,9 @@ static EMAPIClient* apiClient = nil;
 -(NSURLSessionDataTask *)createComment:(EMComment*)comment
                           onCompletion:(void (^)(EMComment* comment, NSError *error))completionBlock {
     NSString *path = [self hostURLWithPath:[[NSString alloc] initWithFormat:PATH_UTIL_COMMENTS, comment.auctionId]];
+    NSError *error;
     return [httpSessionManager POST:path
-                         parameters:nil
+                         parameters:[self dictionaryFromModel:comment error:&error]
                             success: ^(NSURLSessionDataTask *task, id responseObject){
                                 NSError *JSONError;
                                 EMComment *parsedComment = [self getCommentFromResponse:responseObject error:&JSONError];
@@ -334,6 +335,10 @@ static EMAPIClient* apiClient = nil;
 
 
 #pragma mark - Helper
+
+-(NSDictionary *)dictionaryFromModel:(id<MTLJSONSerializing>)model error:(NSError**)error {
+    return [MTLJSONAdapter JSONDictionaryFromModel:model error:error];
+}
 
 - (NSString *)hostURLWithPath:(NSString*)path {
     // TODO move to property list
