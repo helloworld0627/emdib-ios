@@ -17,6 +17,7 @@
 #import "EMAuctionDetailLocationTableViewCell.h"
 #import "EMAuctionDetailStatusTableViewCell.h"
 #import "EMCommentListViewController.h"
+#import "EMBidListViewController.h"
 #import "EMAPIClient.h"
 
 static NSString * const MAP_CELL_ID = @"AuctionDetailMapCell";
@@ -136,33 +137,111 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
 #pragma mark - pop up actions
 
 - (IBAction)presentRightBarItemActionController:(id)sender {
+    void(^saveActionBlock)(UIAlertAction*) = ^(UIAlertAction *action) {
+        [self updateAuctionFromTableView];
+        [[EMAPIClient sharedAPIClient] updateAuction:self.selectedAuction
+                                        onCompletion:^(EMAuction *auction, NSError *error) {
+                                            if (error) {
+                                                NSLog(@"%@", error.localizedDescription);
+                                            }
+                                            UIAlertController *alertMenu = [UIAlertController alertControllerWithTitle: @"Saved"
+                                                                                                               message: nil
+                                                                                                       preferredStyle: UIAlertControllerStyleAlert];
+                                            UIAlertAction *doneAction = [UIAlertAction actionWithTitle:@"OK"
+                                                                                                   style:UIAlertActionStyleDefault
+                                                                                                 handler:^(UIAlertAction *action) {
+                                                                                                 }];
+                                            [alertMenu addAction:doneAction];
+                                            [self presentViewController:alertMenu animated:YES completion:nil];
+                                        }];
+    };
+    UIAlertAction *saveAction = [UIAlertAction actionWithTitle:@"Save Auction Details"
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:saveActionBlock];
+
+    void(^commentActionBlock)(UIAlertAction*) = ^(UIAlertAction *action) {
+        EMCommentListViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"CommentListView"];
+        controller.auction = self.selectedAuction;
+        [self.navigationController pushViewController:controller animated:YES];
+    };
+    UIAlertAction *commentAction = [UIAlertAction actionWithTitle:@"Comments"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:commentActionBlock];
+
+    void(^bidActionBlock)(UIAlertAction*) = ^(UIAlertAction *action) {
+        EMBidListViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"BidListView"];
+        controller.auction = self.selectedAuction;
+        [self.navigationController pushViewController:controller animated:YES];
+    };
+
+    UIAlertAction *bidAction = [UIAlertAction actionWithTitle:@"Bids"
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:bidActionBlock];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel"
+                                                           style:UIAlertActionStyleCancel
+                                                         handler:nil];
     UIAlertController *optionMenu = [UIAlertController alertControllerWithTitle:nil
                                                                         message:nil
                                                                  preferredStyle: UIAlertControllerStyleActionSheet];
-    UIAlertAction *saveAction = [UIAlertAction actionWithTitle:@"Save Auction Details"
-                                                         style:UIAlertActionStyleDefault
-                                                       handler:^(UIAlertAction *action) {
-                                                       }];
-    UIAlertAction *commentAction = [UIAlertAction actionWithTitle:@"Comments"
-                                                            style:UIAlertActionStyleDefault
-                                                          handler:^(UIAlertAction *action) {
-                                                              EMCommentListViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"CommentListView"];
-                                                              controller.auction = self.selectedAuction;
-                                                              [self.navigationController pushViewController:controller animated:YES];
-                                                          }];
-    UIAlertAction *bidAction = [UIAlertAction actionWithTitle:@"Bids"
-                                                        style:UIAlertActionStyleDefault
-                                                      handler:^(UIAlertAction *action) {
-                                                      }];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel"
-                                                           style:UIAlertActionStyleCancel
-                                                         handler:^(UIAlertAction *action) {
-                                                         }];
     [optionMenu addAction:saveAction];
     [optionMenu addAction:commentAction];
     [optionMenu addAction:bidAction];
     [optionMenu addAction:cancelAction];
     [self presentViewController:optionMenu animated:YES completion:nil];
+}
+
+
+- (void)updateAuctionFromTableView {
+    NSArray *cellIdentifiers = [EMAuctionDetailViewController cellIdentifiers];
+    for (int i = 0; i < cellIdentifiers.count; i++) {
+        NSString *cellIdentifier = cellIdentifiers[i];
+        UITableViewCell *tableViewCell = [self.auctionDetailTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+        // assign cell's value
+        if ([TITLE_CELL_ID isEqualToString:cellIdentifier]) {
+            EMAuctionDetailTitleTableViewCell *cell = (EMAuctionDetailTitleTableViewCell*)tableViewCell;
+            self.selectedAuction.auctionTitle = cell.titleLabel.text;
+
+        } else if ([DESC_CELL_ID isEqualToString:cellIdentifier]) {
+            EMAuctionDetailDescriptionTableViewCell *cell = (EMAuctionDetailDescriptionTableViewCell*)tableViewCell;
+            self.selectedAuction.desc = cell.descriptionTextView.text;
+
+        } else if ([CATEGORY_CELL_ID isEqualToString:cellIdentifier]) {
+            EMAuctionDetailCategoryTableViewCell *cell = (EMAuctionDetailCategoryTableViewCell*)tableViewCell;
+            for (EMCategory *c in self.categories) {
+                if ([c.name isEqualToString:cell.categoryLabel.text]) {
+                    self.selectedAuction.categoryId = c.modelId;
+                    break;
+                }
+            }
+
+        } else if ([STATUS_CELL_ID isEqualToString:cellIdentifier]) {
+            EMAuctionDetailStatusTableViewCell *cell = (EMAuctionDetailStatusTableViewCell*)tableViewCell;
+            cell.statusLabel.text = [EMAuction stringFromAuctionStatus:self.selectedAuction.status];
+
+        } else if ([STARTDATE_CELL_ID isEqualToString:cellIdentifier]) {
+            EMAuctionDetailStartDateTableViewCell *cell = (EMAuctionDetailStartDateTableViewCell*)tableViewCell;
+            self.selectedAuction.startDate = [[self class] dateFromString:cell.startDateLabel.text];
+
+        } else if ([ENDDATE_CELL_ID isEqualToString:cellIdentifier]) {
+            EMAuctionDetailEndDateTableViewCell *cell = (EMAuctionDetailEndDateTableViewCell*)tableViewCell;
+            self.selectedAuction.endDate = [[self class] dateFromString:cell.endDateLabel.text];
+
+        } else if ([STARTPRICE_CELL_ID isEqualToString:cellIdentifier]) {
+            EMAuctionDetailStartPriceTableViewCell *cell = (EMAuctionDetailStartPriceTableViewCell*)tableViewCell;
+            self.selectedAuction.startPrice = [[NSNumber alloc] initWithDouble:[cell.startPriceTextField.text doubleValue]];
+
+        } else if ([ENDPRICE_CELL_ID isEqualToString:cellIdentifier]) {
+            EMAuctionDetailEndPriceTableViewCell *cell = (EMAuctionDetailEndPriceTableViewCell*)tableViewCell;
+            self.selectedAuction.endPrice = [[NSNumber alloc] initWithDouble:[cell.endPriceTextField.text doubleValue]];
+
+        } else if ([MAP_CELL_ID isEqualToString:cellIdentifier]) {
+            EMAuctionDetailLocationTableViewCell *cell = (EMAuctionDetailLocationTableViewCell*)tableViewCell;
+            for (id <MKAnnotation> annotation in cell.mapView.annotations) {
+                self.selectedAuction.latitude = [[NSNumber alloc] initWithDouble:[annotation coordinate].latitude];
+                self.selectedAuction.longtitude = [[NSNumber alloc] initWithDouble:[annotation coordinate].longitude];
+            }
+        }
+    }
 }
 
 
@@ -194,6 +273,14 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
 #pragma mark - date formatter
 
 + (NSString*)formatDate:(NSDate*)date {
+    return [[[self class] dateFormatter] stringFromDate:date];
+}
+
++ (NSDate*)dateFromString:(NSString*)date {
+    return [[[self class] dateFormatter] dateFromString:date];
+}
+
++ (NSDateFormatter*)dateFormatter {
     static NSDateFormatter * dateFormatter = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -201,10 +288,8 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
         [dateFormatter setDateFormat: @"yyyy-MM-dd HH:mm:ss"];    // Example: "2014-07-25 16:40:03"
         [dateFormatter setTimeZone: [NSTimeZone timeZoneWithAbbreviation: @"UTC"]];
     });
-
-    return [dateFormatter stringFromDate:date];
+    return dateFormatter;
 }
-
 
 #pragma mark - Navigation
 
