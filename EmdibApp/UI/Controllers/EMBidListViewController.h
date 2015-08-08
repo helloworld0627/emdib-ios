@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EMAuction.h"
+#import "EMBid.h"
 
-@interface EMBidListViewController : UIViewController
+@interface EMBidListViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *bidListTableView;
+@property (strong, nonatomic) EMAuction *auction;
+@property (strong, nonatomic) NSArray *bids;
 
 @end

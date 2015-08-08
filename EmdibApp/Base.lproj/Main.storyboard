@@ -157,7 +157,7 @@
         <!--Bid List View Controller-->
         <scene sceneID="Nvo-hR-BRV">
             <objects>
-                <viewController id="Ry0-x7-kfl" customClass="EMBidListViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BidListView" id="Ry0-x7-kfl" customClass="EMBidListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="msR-xm-zUY"/>
                         <viewControllerLayoutGuide type="bottom" id="GEW-Yg-ybg"/>
@@ -166,8 +166,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="97" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Hgn-fd-Bhk" userLabel="Bid List">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Hgn-fd-Bhk" userLabel="Bid List">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BidListItem" rowHeight="88" id="7WH-LX-DtU" customClass="EMBidListTableViewCell">
@@ -176,45 +176,78 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7WH-LX-DtU" id="kEt-xa-CuF">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZRT-eo-Ebe" userLabel="Thumbnail Image View">
-                                                    <rect key="frame" x="8" y="0.0" width="80" height="80"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZRT-eo-Ebe" userLabel="Thumbnail Image View">
+                                                    <rect key="frame" x="8" y="14" width="60" height="60"/>
+                                                    <color key="backgroundColor" red="0.2364651415" green="0.53765395739999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="ICw-Ne-Ens"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VY2-EO-0MN" userLabel="Price Key Label">
-                                                    <rect key="frame" x="96" y="8" width="60" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VY2-EO-0MN" userLabel="Price Key Label">
+                                                    <rect key="frame" x="76" y="19" width="75" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="75" id="rNg-JJ-DhF"/>
+                                                        <constraint firstAttribute="height" constant="21" id="wuj-AW-pHg"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ToF-Pb-MbI" userLabel="Price Value Label">
-                                                    <rect key="frame" x="182" y="7" width="53" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ha7-fj-UoK" userLabel="Status Key Label">
+                                                    <rect key="frame" x="76" y="48" width="75" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ha7-fj-UoK" userLabel="Status Key Label">
-                                                    <rect key="frame" x="96" y="37" width="75" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Close" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36v-Fa-SsY" userLabel="Status Value Label">
+                                                    <rect key="frame" x="159" y="48" width="44" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Close" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36v-Fa-SsY" userLabel="Status Value Label">
-                                                    <rect key="frame" x="164" y="37" width="44" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UR4-0M-iDD">
+                                                    <rect key="frame" x="159" y="19" width="20" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UR4-0M-iDD">
-                                                    <rect key="frame" x="164" y="8" width="10" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ToF-Pb-MbI" userLabel="Price Value Label">
+                                                    <rect key="frame" x="177" y="19" width="80" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="Id6-Wr-kl5"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VY2-EO-0MN" firstAttribute="firstBaseline" secondItem="UR4-0M-iDD" secondAttribute="firstBaseline" id="2Qb-he-EWx"/>
+                                                <constraint firstItem="ToF-Pb-MbI" firstAttribute="firstBaseline" secondItem="UR4-0M-iDD" secondAttribute="firstBaseline" id="52N-SL-Mnw"/>
+                                                <constraint firstItem="VY2-EO-0MN" firstAttribute="baseline" secondItem="UR4-0M-iDD" secondAttribute="baseline" id="9y6-M5-cla"/>
+                                                <constraint firstItem="VY2-EO-0MN" firstAttribute="top" secondItem="kEt-xa-CuF" secondAttribute="topMargin" constant="11" id="G7i-Vt-5LR"/>
+                                                <constraint firstItem="ToF-Pb-MbI" firstAttribute="leading" secondItem="kEt-xa-CuF" secondAttribute="leading" constant="177" id="LA6-qi-fjP"/>
+                                                <constraint firstItem="36v-Fa-SsY" firstAttribute="leading" secondItem="ha7-fj-UoK" secondAttribute="trailing" constant="8" symbolic="YES" id="MzA-Ba-A9j"/>
+                                                <constraint firstItem="UR4-0M-iDD" firstAttribute="leading" secondItem="VY2-EO-0MN" secondAttribute="trailing" constant="8" id="NSn-JI-OGE"/>
+                                                <constraint firstItem="36v-Fa-SsY" firstAttribute="leading" secondItem="UR4-0M-iDD" secondAttribute="leading" id="NzS-8i-lu2"/>
+                                                <constraint firstItem="ToF-Pb-MbI" firstAttribute="leading" secondItem="UR4-0M-iDD" secondAttribute="trailing" constant="-2" id="PVP-qv-YU6"/>
+                                                <constraint firstItem="ha7-fj-UoK" firstAttribute="top" secondItem="VY2-EO-0MN" secondAttribute="bottom" constant="8" symbolic="YES" id="Qnb-QR-1K7"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ha7-fj-UoK" secondAttribute="bottom" constant="10.5" id="RDo-FL-g3E"/>
+                                                <constraint firstItem="ha7-fj-UoK" firstAttribute="firstBaseline" secondItem="36v-Fa-SsY" secondAttribute="firstBaseline" id="Sf6-X2-C17"/>
+                                                <constraint firstItem="36v-Fa-SsY" firstAttribute="baseline" secondItem="ha7-fj-UoK" secondAttribute="baseline" id="VyD-xn-B98"/>
+                                                <constraint firstItem="VY2-EO-0MN" firstAttribute="leading" secondItem="ZRT-eo-Ebe" secondAttribute="trailing" constant="8" symbolic="YES" id="c68-wO-nbn"/>
+                                                <constraint firstItem="ZRT-eo-Ebe" firstAttribute="leading" secondItem="kEt-xa-CuF" secondAttribute="leadingMargin" id="ggv-AC-q6F"/>
+                                                <constraint firstItem="VY2-EO-0MN" firstAttribute="leading" secondItem="ha7-fj-UoK" secondAttribute="leading" id="hH4-R6-6RG"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ZRT-eo-Ebe" secondAttribute="bottom" constant="5.5" id="iZw-La-GvM"/>
+                                                <constraint firstItem="ToF-Pb-MbI" firstAttribute="baseline" secondItem="UR4-0M-iDD" secondAttribute="baseline" id="lbs-ou-gzT"/>
+                                                <constraint firstItem="ZRT-eo-Ebe" firstAttribute="top" secondItem="kEt-xa-CuF" secondAttribute="topMargin" constant="6" id="oyM-b3-nnE"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="priceLabel" destination="ToF-Pb-MbI" id="78v-lJ-UWm"/>
                                             <outlet property="statusLabel" destination="36v-Fa-SsY" id="AD2-XR-Hdj"/>
                                             <outlet property="thumbnailImageView" destination="ZRT-eo-Ebe" id="JrM-3N-oQ5"/>
+                                            <segue destination="2z8-O3-ndU" kind="show" id="XRz-Gf-L5y"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

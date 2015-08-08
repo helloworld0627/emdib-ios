@@ -7,6 +7,8 @@
 //
 
 #import "EMBidListViewController.h"
+#import "EMAPIClient.h"
+#import "EMBidListTableViewCell.h"
 
 @interface EMBidListViewController ()
 
@@ -17,11 +19,42 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self refreshTableView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.bids.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *tableViewCell = [self.bidListTableView dequeueReusableCellWithIdentifier:@"BidListItem" forIndexPath:indexPath];
+    if (tableViewCell == nil) {
+        tableViewCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"BidListItem"];
+    }
+
+    EMBid* bid = self.bids[indexPath.row];
+    EMBidListTableViewCell *bidListTableViewCell = (EMBidListTableViewCell*) tableViewCell;
+    bidListTableViewCell.priceLabel.text = [[NSString alloc] initWithFormat:@"%.02f", bid.price.doubleValue];
+    bidListTableViewCell.statusLabel.text = [[NSString alloc] initWithFormat:@"%@", [EMBid stringFromBidStatus:bid.status]];
+
+    return bidListTableViewCell;
+}
+
+- (void)refreshTableView {
+    [[EMAPIClient sharedAPIClient] fetchBidsAsSellerByAuctionId:self.auction.modelId
+                                                   onCompletion:^(NSArray *bids, NSError *error) {
+                                                       if(error) {
+                                                           NSLog(@"%@", error.localizedDescription);
+                                                           return;
+                                                       }
+                                                       self.bids = bids;
+                                                       [self.bidListTableView reloadData];
+    }];
 }
 
 /*

@@ -23,4 +23,6 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong) NSNumber *auctionId;
 @property (nonatomic, strong) NSNumber *buyerId;
 
++ (NSString*) stringFromBidStatus:(BidStatus)status;
+
 @end
