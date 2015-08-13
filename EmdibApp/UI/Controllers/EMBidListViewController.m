@@ -9,6 +9,7 @@
 #import "EMBidListViewController.h"
 #import "EMAPIClient.h"
 #import "EMBidListTableViewCell.h"
+#import "EMBidDetailViewController.h"
 
 @interface EMBidListViewController ()
 
@@ -57,14 +58,18 @@
     }];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"BidDetailSegue"]) {
+        EMBidDetailViewController *bidDetailViewController = segue.destinationViewController;
+        NSIndexPath *indexPath = [self.bidListTableView indexPathForSelectedRow];
+        bidDetailViewController.selectedBid = self.bids[indexPath.row];
+    }
 }
-*/
 
 @end

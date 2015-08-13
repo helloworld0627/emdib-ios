@@ -7,6 +7,12 @@
 //
 
 #import "EMBidDetailViewController.h"
+#import "EMBidDetailPriceTableViewCell.h"
+#import "EMBidDetailStatusTableViewCell.h"
+
+static NSString * const IMAGE_CELL_ID = @"BidDetailImageCell";
+static NSString * const PRICE_CELL_ID = @"BidDetailPriceCell";
+static NSString * const STATUS_CELL_ID = @"BidDetailStatusCell";
 
 @interface EMBidDetailViewController ()
 
@@ -22,6 +28,41 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [[self class] cellIdentifiers].count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSInteger idx = indexPath.row;
+    NSString *cellIdentifier = [[self class] cellIdentifiers][idx];
+    UITableViewCell *tableViewCell = nil;
+    if ([cellIdentifier isEqualToString:IMAGE_CELL_ID]) {
+        tableViewCell = [tableView dequeueReusableCellWithIdentifier:IMAGE_CELL_ID];
+
+    }else if ([cellIdentifier isEqualToString:PRICE_CELL_ID]) {
+        tableViewCell = [tableView dequeueReusableCellWithIdentifier:PRICE_CELL_ID];
+        EMBidDetailPriceTableViewCell *cell = (EMBidDetailPriceTableViewCell*)tableViewCell;
+        cell.priceLabel.text = [[NSString alloc] initWithFormat:@"%.02f", self.selectedBid.price.doubleValue];
+
+    } else if ([cellIdentifier isEqualToString:STATUS_CELL_ID]) {
+        tableViewCell = [tableView dequeueReusableCellWithIdentifier:STATUS_CELL_ID];
+        EMBidDetailStatusTableViewCell *cell = (EMBidDetailStatusTableViewCell*)tableViewCell;
+        cell.statusLabel.text = [EMBid stringFromBidStatus:self.selectedBid.status];
+    }
+
+    return tableViewCell;
+}
+
++ (NSArray*)cellIdentifiers {
+    static NSArray *cellIdentifiers;
+    static dispatch_once_t token;
+    dispatch_once(&token, ^{
+        cellIdentifiers = @[IMAGE_CELL_ID, PRICE_CELL_ID, STATUS_CELL_ID];
+    });
+
+    return cellIdentifiers;
 }
 
 /*

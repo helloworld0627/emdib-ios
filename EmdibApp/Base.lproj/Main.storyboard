@@ -247,7 +247,7 @@
                                             <outlet property="priceLabel" destination="ToF-Pb-MbI" id="78v-lJ-UWm"/>
                                             <outlet property="statusLabel" destination="36v-Fa-SsY" id="AD2-XR-Hdj"/>
                                             <outlet property="thumbnailImageView" destination="ZRT-eo-Ebe" id="JrM-3N-oQ5"/>
-                                            <segue destination="2z8-O3-ndU" kind="show" id="XRz-Gf-L5y"/>
+                                            <segue destination="2z8-O3-ndU" kind="show" identifier="BidDetailSegue" id="XRz-Gf-L5y"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -279,9 +279,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="xii-7R-Xjq" userLabel="Bid Detail">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
-                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xii-7R-Xjq" userLabel="Bid Detail">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BidDetailImageCell" rowHeight="200" id="1VJ-Sn-JQa" userLabel="Image Cell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -330,19 +330,34 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pW2-0j-qTP" id="Iqp-vA-MFJ">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAg-mF-fB2" userLabel="Status Key Label">
-                                                    <rect key="frame" x="8" y="8" width="100" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAg-mF-fB2" userLabel="Status Key Label">
+                                                    <rect key="frame" x="8" y="11" width="100" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="y32-0I-krm"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Close" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lp-0P-hPS" userLabel="Status Value Label">
-                                                    <rect key="frame" x="116" y="7" width="44" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Close" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lp-0P-hPS" userLabel="Status Value Label">
+                                                    <rect key="frame" x="116" y="11" width="126" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="126" id="Jdz-li-7UA"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KAg-mF-fB2" firstAttribute="baseline" secondItem="7lp-0P-hPS" secondAttribute="baseline" id="7y1-Uk-2ND"/>
+                                                <constraint firstItem="KAg-mF-fB2" firstAttribute="leading" secondItem="Iqp-vA-MFJ" secondAttribute="leadingMargin" id="XhL-gj-joF"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="7lp-0P-hPS" secondAttribute="bottom" constant="4" id="l3Q-qY-h7A"/>
+                                                <constraint firstItem="7lp-0P-hPS" firstAttribute="top" secondItem="Iqp-vA-MFJ" secondAttribute="topMargin" constant="3" id="okj-6S-nL3"/>
+                                                <constraint firstItem="7lp-0P-hPS" firstAttribute="leading" secondItem="KAg-mF-fB2" secondAttribute="trailing" constant="8" symbolic="YES" id="rB8-Cy-P27"/>
+                                                <constraint firstItem="KAg-mF-fB2" firstAttribute="firstBaseline" secondItem="7lp-0P-hPS" secondAttribute="firstBaseline" id="tDU-OO-Un5"/>
+                                                <constraint firstItem="7lp-0P-hPS" firstAttribute="leading" secondItem="Iqp-vA-MFJ" secondAttribute="leading" constant="116" id="wgZ-hS-pAm"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="statusLabel" destination="7lp-0P-hPS" id="TYa-1Q-qYZ"/>
@@ -363,7 +378,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j1t-zN-68Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2913" y="-1604"/>
+            <point key="canvasLocation" x="-2879" y="-1612"/>
         </scene>
         <!--Status View Controller-->
         <scene sceneID="7HG-Hm-kA8">

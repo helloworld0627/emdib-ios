@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EMBid.h"
 
-@interface EMBidDetailViewController : UIViewController
+@interface EMBidDetailViewController : UIViewController<UITableViewDataSource, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *bidDetailTableView;
+@property (strong, nonatomic) EMBid *selectedBid;
 
 @end
