@@ -137,6 +137,20 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
 #pragma mark - pop up actions
 
 - (IBAction)presentRightBarItemActionController:(id)sender {
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel"
+                                                           style:UIAlertActionStyleCancel
+                                                         handler:nil];
+    UIAlertController *optionMenu = [UIAlertController alertControllerWithTitle:nil
+                                                                        message:nil
+                                                                 preferredStyle: UIAlertControllerStyleActionSheet];
+    [optionMenu addAction:[self saveAction]];
+    [optionMenu addAction:[self commentAction]];
+    [optionMenu addAction:[self bidAction]];
+    [optionMenu addAction:cancelAction];
+    [self presentViewController:optionMenu animated:YES completion:nil];
+}
+
+- (UIAlertAction*)saveAction {
     void(^saveActionBlock)(UIAlertAction*) = ^(UIAlertAction *action) {
         [self updateAuctionFromTableView];
         [[EMAPIClient sharedAPIClient] updateAuction:self.selectedAuction
@@ -146,11 +160,11 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
                                             }
                                             UIAlertController *alertMenu = [UIAlertController alertControllerWithTitle: @"Saved"
                                                                                                                message: nil
-                                                                                                       preferredStyle: UIAlertControllerStyleAlert];
+                                                                                                        preferredStyle: UIAlertControllerStyleAlert];
                                             UIAlertAction *doneAction = [UIAlertAction actionWithTitle:@"OK"
-                                                                                                   style:UIAlertActionStyleDefault
-                                                                                                 handler:^(UIAlertAction *action) {
-                                                                                                 }];
+                                                                                                 style:UIAlertActionStyleDefault
+                                                                                               handler:^(UIAlertAction *action) {
+                                                                                               }];
                                             [alertMenu addAction:doneAction];
                                             [self presentViewController:alertMenu animated:YES completion:nil];
                                         }];
@@ -158,7 +172,10 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
     UIAlertAction *saveAction = [UIAlertAction actionWithTitle:@"Save Auction Details"
                                                          style:UIAlertActionStyleDefault
                                                        handler:saveActionBlock];
+    return saveAction;
+}
 
+- (UIAlertAction*)commentAction {
     void(^commentActionBlock)(UIAlertAction*) = ^(UIAlertAction *action) {
         EMCommentListViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"CommentListView"];
         controller.auction = self.selectedAuction;
@@ -167,7 +184,10 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
     UIAlertAction *commentAction = [UIAlertAction actionWithTitle:@"Comments"
                                                             style:UIAlertActionStyleDefault
                                                           handler:commentActionBlock];
+    return commentAction;
+}
 
+- (UIAlertAction*)bidAction {
     void(^bidActionBlock)(UIAlertAction*) = ^(UIAlertAction *action) {
         EMBidListViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"BidListView"];
         controller.auction = self.selectedAuction;
@@ -177,19 +197,8 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
     UIAlertAction *bidAction = [UIAlertAction actionWithTitle:@"Bids"
                                                         style:UIAlertActionStyleDefault
                                                       handler:bidActionBlock];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel"
-                                                           style:UIAlertActionStyleCancel
-                                                         handler:nil];
-    UIAlertController *optionMenu = [UIAlertController alertControllerWithTitle:nil
-                                                                        message:nil
-                                                                 preferredStyle: UIAlertControllerStyleActionSheet];
-    [optionMenu addAction:saveAction];
-    [optionMenu addAction:commentAction];
-    [optionMenu addAction:bidAction];
-    [optionMenu addAction:cancelAction];
-    [self presentViewController:optionMenu animated:YES completion:nil];
+    return bidAction;
 }
-
 
 - (void)updateAuctionFromTableView {
     NSArray *cellIdentifiers = [EMAuctionDetailViewController cellIdentifiers];
