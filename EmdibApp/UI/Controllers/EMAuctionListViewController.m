@@ -84,12 +84,16 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([[segue identifier] isEqualToString:@"AuctionDetailSegue"])
-    {
+    if ([[segue identifier] isEqualToString:@"AuctionDetailSegue"]) {
         NSInteger idx = [[self.auctionListTableView indexPathForSelectedRow] row];
         EMAuction *selectedAuction = [self.auctions objectAtIndex:idx];
         EMAuctionDetailViewController *controller = segue.destinationViewController;
         controller.selectedAuction = selectedAuction;
+        controller.categories = self.categories;
+
+    } else if ([[segue identifier] isEqualToString:@"AuctionDetailCreateSegue"]) {
+        EMAuctionDetailViewController *controller = segue.destinationViewController;
+        controller.selectedAuction = [[EMAuction alloc] init];
         controller.categories = self.categories;
     }
 }

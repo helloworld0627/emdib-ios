@@ -79,6 +79,9 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
 
     } else if ([CATEGORY_CELL_ID isEqualToString:cellIdentifier]) {
         EMAuctionDetailCategoryTableViewCell *cell = (EMAuctionDetailCategoryTableViewCell*)tableViewCell;
+        if (self.selectedAuction.categoryId == nil) {
+            return cell;
+        }
         for (EMCategory *c in self.categories) {
             if ([c.modelId isEqualToNumber:self.selectedAuction.categoryId]) {
                 cell.categoryLabel.text = c.name;

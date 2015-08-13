@@ -121,6 +121,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Auctions" id="ysR-jW-gip">
                         <barButtonItem key="backBarButtonItem" title="Back" id="TAC-Yp-wUK"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hj2-Cu-VjQ">
+                            <connections>
+                                <segue destination="ri7-ZG-btk" kind="show" identifier="AuctionDetailCreateSegue" id="Q2I-fd-Q2e"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="auctionListTableView" destination="mSO-oW-otW" id="uhC-eU-UGT"/>
@@ -838,4 +843,7 @@
             <point key="canvasLocation" x="-4355" y="-938"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Q2I-fd-Q2e"/>
+    </inferredMetricsTieBreakers>
 </document>
