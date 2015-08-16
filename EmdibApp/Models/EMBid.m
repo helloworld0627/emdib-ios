@@ -30,6 +30,22 @@
                                                                            }];
 }
 
++(BidStatus)bidStatusFromString:(NSString*)string {
+    static NSDictionary *dict;
+    static dispatch_once_t token;
+    dispatch_once(&token, ^{
+        dict = @{
+                 @"begin": @(BidStatusBegin),
+                 @"end_win": @(BidStatusEndWin),
+                 @"end_lose": @(BidStatusEndLose),
+                 @"cancel": @(BidStatusCancel)
+                 };
+    });
+
+    NSNumber *val = dict[string];
+    return (BidStatus)val.intValue;
+};
+
 + (NSString*) stringFromBidStatus:(BidStatus)status {
     NSString *val = @"-";
     switch (status) {

@@ -44,7 +44,7 @@ static EMAPIClient* apiClient = nil;
 
 -(instancetype)init {
     if(self = [super init]) {
-        NSString *token = @"CAACEdEose0cBAPkgCMooEFkfWCeZBZAY23TOAavly8LPxx5tZC4EcCetoLIeRMfbPSvZB71eFZBKKmldK3YLIja1l1H0ntmlgfMyMfgzqwXnFzlxjJYCMpXSKm5hL9AHVhZCDFiSrsDGNJ5TrNZC9MZBh75vldEvjWciZCe3QuKzBs4yHKXrSC66rp8nftMiNFbwp7moHFKGrOcGq8qW12FYf";
+        NSString *token = @"CAACEdEose0cBALbfLVc1BxdybEPhEQfkkm9RkZBJZAG3EoLLcqTBw6PZBLv7fP66GyDQ0ILg14axhCZCdb1w2JyOZAWtjDnOqerGu4ezlbjDHCwCWKNfvswhnGadhIvthSZBtl8XxesPYFrDZCA7YJfmohLn9lbkDauRNkUH8gvYKAZBsT8vOynGlUgJUaDjzokaVWeiiBcDSwZDZD";
         httpSessionManager = [AFHTTPSessionManager manager];
         httpSessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
         [httpSessionManager.requestSerializer setValue:[NSString stringWithFormat:@"Token token=\"%@\"", token] forHTTPHeaderField:@"Authorization"];
@@ -210,8 +210,12 @@ static EMAPIClient* apiClient = nil;
                                 bidId:(NSNumber*) bidId
                          onCompletion:(void (^)(EMBid* bid, NSError *error))completionBlock {
     NSString *path = [self hostURLWithPath:[[NSString alloc] initWithFormat:PATH_SELLER_BID, auctionId, bidId]];
+    EMBid *bid = [EMBid new];
+    bid.auctionId = auctionId;
+    bid.status = bidStatus;
+    NSError *error;
     return [httpSessionManager PUT:path
-                        parameters:nil
+                        parameters:[self dictionaryFromModel:bid error:&error]
                            success: ^(NSURLSessionDataTask *task, id responseObject){
                                NSError *JSONError;
                                EMBid *parsedBid = [self getBidFromResponse:responseObject error:&JSONError];

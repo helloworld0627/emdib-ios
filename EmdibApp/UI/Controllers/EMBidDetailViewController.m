@@ -9,6 +9,7 @@
 #import "EMBidDetailViewController.h"
 #import "EMBidDetailPriceTableViewCell.h"
 #import "EMBidDetailStatusTableViewCell.h"
+#import "EMAPIClient.h"
 
 static NSString * const IMAGE_CELL_ID = @"BidDetailImageCell";
 static NSString * const PRICE_CELL_ID = @"BidDetailPriceCell";
@@ -76,7 +77,35 @@ static NSString * const STATUS_CELL_ID = @"BidDetailStatusCell";
 }
 
 - (IBAction)saveBid:(id)sender {
+    [self updateBidFromTableView];
+    self.selectedBid.status = BidStatusEndLose;
+    [[EMAPIClient sharedAPIClient] setBidStatus:self.selectedBid.status
+                                      auctionId:self.selectedBid.auctionId
+                                          bidId:self.selectedBid.modelId
+                                   onCompletion:^(EMBid *bid, NSError *error) {
+                                       if (error) {
+                                           NSLog(@"%@", error.localizedDescription);
+                                           return;
+                                       }
+                                       [self.bidDetailTableView reloadData];
+    }];
+}
 
+- (void)updateBidFromTableView {
+    NSArray *cellIdentifiers = [[self class] cellIdentifiers];
+    for (int i = 0; i < cellIdentifiers.count; i++) {
+        NSString* cellIdentifier = cellIdentifiers[i];
+        NSIndexPath *path = [NSIndexPath indexPathForRow:i inSection:0];
+        UITableViewCell *cell = [self.bidDetailTableView cellForRowAtIndexPath:path];
+        if ([cellIdentifier isEqualToString:PRICE_CELL_ID]) {
+            EMBidDetailPriceTableViewCell *priceCell = (EMBidDetailPriceTableViewCell*)cell;
+            self.selectedBid.price = [[NSNumber alloc] initWithDouble: priceCell.priceLabel.text.doubleValue];
+
+        } else if ([cellIdentifier isEqualToString:STATUS_CELL_ID]) {
+            EMBidDetailStatusTableViewCell *statusCell = (EMBidDetailStatusTableViewCell*)cell;
+            self.selectedBid.status = [EMBid bidStatusFromString:statusCell.statusLabel.text];
+        }
+    }
 }
 
 /*
