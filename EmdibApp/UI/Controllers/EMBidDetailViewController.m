@@ -55,6 +55,16 @@ static NSString * const STATUS_CELL_ID = @"BidDetailStatusCell";
     return tableViewCell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *cellIdentifier = [[self class] cellIdentifiers][indexPath.row];
+    if ([cellIdentifier isEqualToString:IMAGE_CELL_ID]) {
+        return 120;
+    } else {
+        return 44;
+    }
+}
+
 + (NSArray*)cellIdentifiers {
     static NSArray *cellIdentifiers;
     static dispatch_once_t token;
@@ -63,6 +73,10 @@ static NSString * const STATUS_CELL_ID = @"BidDetailStatusCell";
     });
 
     return cellIdentifiers;
+}
+
+- (IBAction)saveBid:(id)sender {
+
 }
 
 /*

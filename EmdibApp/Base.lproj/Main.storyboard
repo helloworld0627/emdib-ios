@@ -162,7 +162,7 @@
         <!--Bid List View Controller-->
         <scene sceneID="Nvo-hR-BRV">
             <objects>
-                <viewController storyboardIdentifier="BidListView" id="Ry0-x7-kfl" customClass="EMBidListViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BidListView" id="Ry0-x7-kfl" userLabel="Bid List View Controller" customClass="EMBidListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="msR-xm-zUY"/>
                         <viewControllerLayoutGuide type="bottom" id="GEW-Yg-ybg"/>
@@ -264,18 +264,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Bids" id="NVC-s3-Fp1"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="bidListTableView" destination="Hgn-fd-Bhk" id="OLk-3U-QPx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxT-ku-Wf8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3609" y="-1604"/>
+            <point key="canvasLocation" x="-3609" y="-1609"/>
         </scene>
-        <!--Bid Detail View Controller-->
+        <!--Bid Details-->
         <scene sceneID="Aas-1m-2Xn">
             <objects>
-                <viewController id="2z8-O3-ndU" customClass="EMBidDetailViewController" sceneMemberID="viewController">
+                <viewController id="2z8-O3-ndU" userLabel="Bid Details" customClass="EMBidDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sCG-nQ-FnB"/>
                         <viewControllerLayoutGuide type="bottom" id="KyQ-3v-S7a"/>
@@ -288,14 +291,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BidDetailImageCell" rowHeight="200" id="1VJ-Sn-JQa" userLabel="Image Cell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BidDetailImageCell" rowHeight="100" id="vFd-oB-Bgd" userLabel="Image Cell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1VJ-Sn-JQa" id="cOJ-Pf-WAa">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vFd-oB-Bgd" id="8lQ-I4-9ys">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="phA-kt-AAq">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dNC-xZ-lAg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -377,13 +380,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Bid Details" id="1KA-A3-cbM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="2Ub-18-yHn">
+                            <connections>
+                                <action selector="saveBid:" destination="2z8-O3-ndU" id="4si-Sf-AES"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="bidDetailTableView" destination="xii-7R-Xjq" id="PFw-J7-vgI"/>
+                        <outlet property="saveBarButtonItem" destination="2Ub-18-yHn" id="ZEO-O9-DEd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j1t-zN-68Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2879" y="-1612"/>
+            <point key="canvasLocation" x="-2913" y="-1609"/>
         </scene>
         <!--Status View Controller-->
         <scene sceneID="7HG-Hm-kA8">

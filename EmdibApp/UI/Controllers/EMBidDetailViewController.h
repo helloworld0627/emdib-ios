@@ -12,6 +12,7 @@
 @interface EMBidDetailViewController : UIViewController<UITableViewDataSource, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *bidDetailTableView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveBarButtonItem;
 @property (strong, nonatomic) EMBid *selectedBid;
 
 @end
