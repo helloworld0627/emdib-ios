@@ -44,7 +44,7 @@ static EMAPIClient* apiClient = nil;
 
 -(instancetype)init {
     if(self = [super init]) {
-        NSString *token = @"CAACEdEose0cBALbfLVc1BxdybEPhEQfkkm9RkZBJZAG3EoLLcqTBw6PZBLv7fP66GyDQ0ILg14axhCZCdb1w2JyOZAWtjDnOqerGu4ezlbjDHCwCWKNfvswhnGadhIvthSZBtl8XxesPYFrDZCA7YJfmohLn9lbkDauRNkUH8gvYKAZBsT8vOynGlUgJUaDjzokaVWeiiBcDSwZDZD";
+        NSString *token = @"CAACEdEose0cBADtyqkAIXenFjcrZB0V8ipb0Fy0ntugmpLCfZAYiGLUGpK0tNvXP1XRYChXMQI7pLInUg8kkyNkZBHEs8EgkcwBLZCHhQ1oUNWqcInMaay184rnqWzVZAZBbamYkpxXE4oCgsCsHSVf1Eqmn1HqKCZCgYdEflZAbNivUtvzboLSZCti6enkwUItVAzO8lxlDqkQZDZD";
         httpSessionManager = [AFHTTPSessionManager manager];
         httpSessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
         [httpSessionManager.requestSerializer setValue:[NSString stringWithFormat:@"Token token=\"%@\"", token] forHTTPHeaderField:@"Authorization"];
@@ -164,9 +164,10 @@ static EMAPIClient* apiClient = nil;
 
 -(NSURLSessionDataTask *)createAuction:(EMAuction*)auction
                           onCompletion:(void (^)(EMAuction* auction, NSError *error))completionBlock {
-    NSString *path = [self hostURLWithPath:PATH_SELLER_AUCTION];
+    NSString *path = [self hostURLWithPath:PATH_SELLER_AUCTIONS];
+    NSError *error;
     return [httpSessionManager POST:path
-                         parameters:nil
+                         parameters:[self dictionaryFromModel:auction error:&error]
                             success: ^(NSURLSessionDataTask *task, id responseObject){
                                 NSError *JSONError;
                                 EMAuction *parsedAuction = [self getAuctionFromResponse:responseObject error:&JSONError];

@@ -38,7 +38,19 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if ([self isNewMode]) {
+        self.selectedAuction.startDate = [NSDate date];
+        self.selectedAuction.endDate = [NSDate date];
+        self.selectedAuction.status = AuctionStatusBegin;
+        self.selectedAuction.startPrice = @(10);
+        self.selectedAuction.endPrice = @(20);
+        self.selectedAuction.categoryId = @1;
+        self.selectedAuction.auctionTitle = @"asdf";
 
+        UIBarButtonItem *createButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
+                                                                        target:self action:@selector(createAuction)];
+        self.navigationItem.rightBarButtonItem = createButton;
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -52,6 +64,28 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
     // Dispose of any resources that can be recreated.
 }
 
+-(BOOL)isNewMode {
+    return self.selectedAuction.modelId == nil;
+}
+
+-(void)createAuction {
+    [self updateAuctionFromTableView];
+    [[EMAPIClient sharedAPIClient] createAuction:self.selectedAuction
+                                    onCompletion:^(EMAuction *auction, NSError *error) {
+                                            if (error) {
+                                                NSLog(@"%@", error.localizedDescription);
+                                            }
+                                            UIAlertController *alertMenu = [UIAlertController alertControllerWithTitle: @"Created"
+                                                                                                                message: nil
+                                                                                                        preferredStyle: UIAlertControllerStyleAlert];
+                                            UIAlertAction *doneAction = [UIAlertAction actionWithTitle:@"OK"
+                                                                                                 style:UIAlertActionStyleDefault
+                                                                                               handler:^(UIAlertAction *action) {
+                                                                                                   }];
+                                                [alertMenu addAction:doneAction];
+                                                [self presentViewController:alertMenu animated:YES completion:nil];
+                                            }];
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [EMAuctionDetailViewController cellIdentifiers].count;
