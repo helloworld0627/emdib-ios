@@ -34,6 +34,8 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
 
 @interface EMAuctionDetailViewController ()
 
+@property (nonatomic, strong) UIDatePicker *datePicker;
+
 @end
 
 @implementation EMAuctionDetailViewController
@@ -63,7 +65,6 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -93,6 +94,9 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
                                                 [self presentViewController:alertMenu animated:YES completion:nil];
                                             }];
 }
+
+
+#pragma marks - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [EMAuctionDetailViewController cellIdentifiers].count;
@@ -163,8 +167,10 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
     return tableViewCell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+
+#pragma marks - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *cellIdentifier = [[self class] cellIdentifiers][indexPath.row];
     if ([cellIdentifier isEqualToString:DESC_CELL_ID ]) {
         return 120;
@@ -174,6 +180,45 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
         return 44;
     }
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSArray *cellIdentifiers = [[self class] cellIdentifiers];
+    NSString *cellIdentifier = cellIdentifiers[indexPath.row];
+    if ([STARTDATE_CELL_ID isEqualToString:cellIdentifier]) {
+        void(^selectDateBlock)(UIAlertAction*) = ^(UIAlertAction *action) {
+            self.selectedAuction.startDate = self.datePicker.date;
+            [self.auctionDetailTableView reloadData];
+        };
+        [self presentDatePicker:self.selectedAuction.startDate handler:selectDateBlock];
+    } else if ([ENDDATE_CELL_ID isEqualToString:cellIdentifier]) {
+        void(^selectDateBlock)(UIAlertAction*) = ^(UIAlertAction *action) {
+            self.selectedAuction.endDate = self.datePicker.date;
+            [self.auctionDetailTableView reloadData];
+        };
+        [self presentDatePicker:self.selectedAuction.endDate handler:selectDateBlock];
+    }
+}
+
+- (void)presentDatePicker:(NSDate*)date handler:(void(^)(UIAlertAction*))selectDateBlock {
+    UIAlertController *selectDateMenu = [UIAlertController alertControllerWithTitle:@"Select Date"
+                                                                            message:nil
+                                                                     preferredStyle: UIAlertControllerStyleActionSheet];
+
+    self.datePicker = [[UIDatePicker alloc] initWithFrame:CGRectZero];
+    //datePicker.datePickerMode = UIDatePickerModeDate;
+    UIViewController *subviewController = [[UIViewController alloc] init];
+    subviewController.preferredContentSize = CGSizeMake(subviewController.preferredContentSize.width, 200);
+    [subviewController.view addSubview:self.datePicker];
+
+    UIAlertAction *selectDateAction = [UIAlertAction actionWithTitle:@"Done"
+                                                               style:UIAlertActionStyleDefault
+                                                             handler:selectDateBlock];
+
+    [selectDateMenu setValue:subviewController forKey:@"contentViewController"];
+    [selectDateMenu addAction:selectDateAction];
+    [self presentViewController:selectDateMenu animated:YES completion:nil];
+}
+
 
 #pragma mark - pop up actions
 
