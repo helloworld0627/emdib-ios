@@ -1,19 +1,19 @@
 //
-//  EMStatusViewController.m
+//  EMAuctionStatusViewController.m
 //  EmdibApp
 //
 //  Created by Chris Kwok on 7/25/15.
 //  Copyright (c) 2015 Chris Kwok. All rights reserved.
 //
 
-#import "EMStatusViewController.h"
+#import "EMAuctionStatusViewController.h"
 #import "EMAuction.h"
 
-@interface EMStatusViewController ()
+@interface EMAuctionStatusViewController ()
 
 @end
 
-@implementation EMStatusViewController
+@implementation EMAuctionStatusViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

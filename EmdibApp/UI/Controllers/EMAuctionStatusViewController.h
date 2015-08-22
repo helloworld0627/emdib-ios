@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EMStatusViewController : UITableViewController
+@interface EMAuctionStatusViewController : UITableViewController
 
 @end

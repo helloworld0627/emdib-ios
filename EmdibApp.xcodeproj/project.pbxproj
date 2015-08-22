@@ -32,8 +32,8 @@
 		C0B8041E1B64267700B0CA47 /* EMAuctionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B8041C1B64267700B0CA47 /* EMAuctionDetailViewController.m */; };
 		C0B804211B64268E00B0CA47 /* EMBidDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804201B64268E00B0CA47 /* EMBidDetailViewController.m */; };
 		C0B804221B64268E00B0CA47 /* EMBidDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804201B64268E00B0CA47 /* EMBidDetailViewController.m */; };
-		C0B804251B6426DE00B0CA47 /* EMStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804241B6426DE00B0CA47 /* EMStatusViewController.m */; };
-		C0B804261B6426DE00B0CA47 /* EMStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804241B6426DE00B0CA47 /* EMStatusViewController.m */; };
+		C0B804251B6426DE00B0CA47 /* EMAuctionStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804241B6426DE00B0CA47 /* EMAuctionStatusViewController.m */; };
+		C0B804261B6426DE00B0CA47 /* EMAuctionStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804241B6426DE00B0CA47 /* EMAuctionStatusViewController.m */; };
 		C0B804291B6426EE00B0CA47 /* EMCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804281B6426EE00B0CA47 /* EMCategoryViewController.m */; };
 		C0B8042A1B6426EE00B0CA47 /* EMCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B804281B6426EE00B0CA47 /* EMCategoryViewController.m */; };
 		C0B8042D1B64274A00B0CA47 /* EMCommentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B8042C1B64274A00B0CA47 /* EMCommentListViewController.m */; };
@@ -121,8 +121,8 @@
 		C0B8041C1B64267700B0CA47 /* EMAuctionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMAuctionDetailViewController.m; path = UI/Controllers/EMAuctionDetailViewController.m; sourceTree = "<group>"; };
 		C0B8041F1B64268E00B0CA47 /* EMBidDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMBidDetailViewController.h; path = UI/Controllers/EMBidDetailViewController.h; sourceTree = "<group>"; };
 		C0B804201B64268E00B0CA47 /* EMBidDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMBidDetailViewController.m; path = UI/Controllers/EMBidDetailViewController.m; sourceTree = "<group>"; };
-		C0B804231B6426DE00B0CA47 /* EMStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMStatusViewController.h; path = UI/Controllers/EMStatusViewController.h; sourceTree = "<group>"; };
-		C0B804241B6426DE00B0CA47 /* EMStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMStatusViewController.m; path = UI/Controllers/EMStatusViewController.m; sourceTree = "<group>"; };
+		C0B804231B6426DE00B0CA47 /* EMAuctionStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMAuctionStatusViewController.h; path = UI/Controllers/EMAuctionStatusViewController.h; sourceTree = "<group>"; };
+		C0B804241B6426DE00B0CA47 /* EMAuctionStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMAuctionStatusViewController.m; path = UI/Controllers/EMAuctionStatusViewController.m; sourceTree = "<group>"; };
 		C0B804271B6426EE00B0CA47 /* EMCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMCategoryViewController.h; path = UI/Controllers/EMCategoryViewController.h; sourceTree = "<group>"; };
 		C0B804281B6426EE00B0CA47 /* EMCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMCategoryViewController.m; path = UI/Controllers/EMCategoryViewController.m; sourceTree = "<group>"; };
 		C0B8042B1B64274A00B0CA47 /* EMCommentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMCommentListViewController.h; path = UI/Controllers/EMCommentListViewController.h; sourceTree = "<group>"; };
@@ -316,8 +316,8 @@
 				C0B8041C1B64267700B0CA47 /* EMAuctionDetailViewController.m */,
 				C0B8041F1B64268E00B0CA47 /* EMBidDetailViewController.h */,
 				C0B804201B64268E00B0CA47 /* EMBidDetailViewController.m */,
-				C0B804231B6426DE00B0CA47 /* EMStatusViewController.h */,
-				C0B804241B6426DE00B0CA47 /* EMStatusViewController.m */,
+				C0B804231B6426DE00B0CA47 /* EMAuctionStatusViewController.h */,
+				C0B804241B6426DE00B0CA47 /* EMAuctionStatusViewController.m */,
 				C0B804271B6426EE00B0CA47 /* EMCategoryViewController.h */,
 				C0B804281B6426EE00B0CA47 /* EMCategoryViewController.m */,
 				C0B8042B1B64274A00B0CA47 /* EMCommentListViewController.h */,
@@ -540,7 +540,7 @@
 				C00138741B4396E2001EF6A9 /* ViewController.m in Sources */,
 				C0B804501B6432FE00B0CA47 /* EMAuctionListTableViewCell.m in Sources */,
 				C0B8041D1B64267700B0CA47 /* EMAuctionDetailViewController.m in Sources */,
-				C0B804251B6426DE00B0CA47 /* EMStatusViewController.m in Sources */,
+				C0B804251B6426DE00B0CA47 /* EMAuctionStatusViewController.m in Sources */,
 				C0B8045C1B6433D200B0CA47 /* EMBidDetailStatusTableViewCell.m in Sources */,
 				C0B804601B64346E00B0CA47 /* EMAuctionDetailStatusTableViewCell.m in Sources */,
 				C0B804781B64353700B0CA47 /* EMAuctionDetailStartPriceTableViewCell.m in Sources */,
@@ -585,7 +585,7 @@
 				C00138881B4396E3001EF6A9 /* EmdibAppTests.m in Sources */,
 				C0B804691B6434AB00B0CA47 /* EMAuctionDetailDescriptionTableViewCell.m in Sources */,
 				C097ABD71B49C17E001ED5B8 /* EMCategory.m in Sources */,
-				C0B804261B6426DE00B0CA47 /* EMStatusViewController.m in Sources */,
+				C0B804261B6426DE00B0CA47 /* EMAuctionStatusViewController.m in Sources */,
 				C0B8045D1B6433D200B0CA47 /* EMBidDetailStatusTableViewCell.m in Sources */,
 				C0B804811B64359900B0CA47 /* EMAuctionDetailLocationTableViewCell.m in Sources */,
 				C0B8046D1B6434DC00B0CA47 /* EMAuctionDetailCategoryTableViewCell.m in Sources */,
