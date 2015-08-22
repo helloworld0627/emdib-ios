@@ -44,10 +44,9 @@ static EMAPIClient* apiClient = nil;
 
 -(instancetype)init {
     if(self = [super init]) {
-        NSString *token = @"CAACEdEose0cBADtyqkAIXenFjcrZB0V8ipb0Fy0ntugmpLCfZAYiGLUGpK0tNvXP1XRYChXMQI7pLInUg8kkyNkZBHEs8EgkcwBLZCHhQ1oUNWqcInMaay184rnqWzVZAZBbamYkpxXE4oCgsCsHSVf1Eqmn1HqKCZCgYdEflZAbNivUtvzboLSZCti6enkwUItVAzO8lxlDqkQZDZD";
         httpSessionManager = [AFHTTPSessionManager manager];
         httpSessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
-        [httpSessionManager.requestSerializer setValue:[NSString stringWithFormat:@"Token token=\"%@\"", token] forHTTPHeaderField:@"Authorization"];
+        [httpSessionManager.requestSerializer setValue:[NSString stringWithFormat:@"Token token=\"%@\"", FB_TOKEN] forHTTPHeaderField:@"Authorization"];
     }
     return self;
 }
