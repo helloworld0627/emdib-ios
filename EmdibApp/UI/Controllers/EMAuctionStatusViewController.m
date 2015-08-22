@@ -45,6 +45,14 @@
 }
 
 
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.selectedAuction.status = indexPath.row;
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
 /*
 #pragma mark - Navigation
 

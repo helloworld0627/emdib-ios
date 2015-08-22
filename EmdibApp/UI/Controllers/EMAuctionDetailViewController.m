@@ -18,6 +18,7 @@
 #import "EMAuctionDetailStatusTableViewCell.h"
 #import "EMCommentListViewController.h"
 #import "EMBidListViewController.h"
+#import "EMAuctionStatusViewController.h"
 #import "EMAPIClient.h"
 
 static NSString * const MAP_CELL_ID = @"AuctionDetailMapCell";
@@ -51,6 +52,11 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
                                                                         target:self action:@selector(createAuction)];
         self.navigationItem.rightBarButtonItem = createButton;
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.auctionDetailTableView reloadData]; // to reload selected cell
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -343,6 +349,10 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"AuctionStatusSegue"]) {
+        EMAuctionStatusViewController *controller = segue.destinationViewController;
+        controller.selectedAuction = self.selectedAuction;
+    }
 }
 
 

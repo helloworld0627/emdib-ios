@@ -532,7 +532,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="categoryLabel" destination="4kq-ty-Yu7" id="ZzI-IT-w4R"/>
-                                            <segue destination="NpD-OJ-hcO" kind="show" id="gNW-3R-JRF"/>
+                                            <segue destination="NpD-OJ-hcO" kind="show" identifier="AuctionCategorySegue" id="gNW-3R-JRF"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AuctionDetailStatusCell" id="uvh-ph-Wvz" userLabel="Status Cell" customClass="EMAuctionDetailStatusTableViewCell">
@@ -557,7 +557,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="statusLabel" destination="GDi-F5-X5B" id="ay5-D3-oUH"/>
-                                            <segue destination="gxJ-yG-aOc" kind="show" id="UeU-w3-1ne"/>
+                                            <segue destination="gxJ-yG-aOc" kind="show" identifier="AuctionStatusSegue" id="UeU-w3-1ne"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionDetailStartDateCell" id="QSM-Bg-Ruh" userLabel="StartDate Cell" customClass="EMAuctionDetailStartDateTableViewCell">
@@ -857,6 +857,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Q2I-fd-Q2e"/>
+        <segue reference="n8O-M3-NjM"/>
     </inferredMetricsTieBreakers>
 </document>
