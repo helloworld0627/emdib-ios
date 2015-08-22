@@ -14,4 +14,7 @@
 @property(strong, nonatomic, readonly) NSNumber *parentCategoryId;
 @property(strong, nonatomic, readonly) NSString *name;
 
+
++ (EMCategory *)categoryWithModeId:(NSNumber*)modelId from:(NSArray*)categories;
+
 @end

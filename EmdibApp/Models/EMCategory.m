@@ -18,4 +18,14 @@
              }];
 }
 
++ (EMCategory *)categoryWithModeId:(NSNumber*)modelId from:(NSArray*)categories {
+    for (EMCategory *c in categories) {
+        if ([c.modelId isEqualToNumber:modelId]) {
+            return c;
+        }
+    }
+    return nil;
+}
+
+
 @end
