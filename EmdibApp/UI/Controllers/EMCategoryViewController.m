@@ -35,6 +35,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+#pragma mark - UITableViewDataSource
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.categories.count;
 }
@@ -49,6 +52,15 @@
     EMCategory *category = self.categories[indexPath.row];
     cell.textLabel.text = category.name;
     return cell;
+}
+
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    EMCategory *category = self.categories[indexPath.row];
+    self.selectedAuction.categoryId = category.modelId;
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

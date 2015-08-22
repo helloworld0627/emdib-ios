@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EMCategory.h"
 
 @interface EMAuctionDetailCategoryTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
+@property (strong, nonatomic) EMCategory *category;
 
 @end

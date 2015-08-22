@@ -19,6 +19,7 @@
 #import "EMCommentListViewController.h"
 #import "EMBidListViewController.h"
 #import "EMAuctionStatusViewController.h"
+#import "EMCategoryViewController.h"
 #import "EMAPIClient.h"
 
 static NSString * const MAP_CELL_ID = @"AuctionDetailMapCell";
@@ -122,12 +123,9 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
         if (self.selectedAuction.categoryId == nil) {
             return cell;
         }
-        for (EMCategory *c in self.categories) {
-            if ([c.modelId isEqualToNumber:self.selectedAuction.categoryId]) {
-                cell.categoryLabel.text = c.name;
-                break;
-            }
-        }
+        cell.category = [EMCategory categoryWithModeId:self.selectedAuction.categoryId
+                                                  from:self.categories];
+        cell.categoryLabel.text = cell.category.name;
         return cell;
 
     } else if ([STATUS_CELL_ID isEqualToString:cellIdentifier]) {
@@ -351,6 +349,9 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
     // Pass the selected object to the new view controller.
     if ([segue.identifier isEqualToString:@"AuctionStatusSegue"]) {
         EMAuctionStatusViewController *controller = segue.destinationViewController;
+        controller.selectedAuction = self.selectedAuction;
+    } else if ([segue.identifier isEqualToString:@"AuctionCategorySegue"]) {
+        EMCategoryViewController *controller = segue.destinationViewController;
         controller.selectedAuction = self.selectedAuction;
     }
 }

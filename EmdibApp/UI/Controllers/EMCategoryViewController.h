@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EMAuction.h"
 
 @interface EMCategoryViewController : UITableViewController
+
+@property (strong, nonatomic) EMAuction *selectedAuction;
 
 @end
