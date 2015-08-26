@@ -9,6 +9,26 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-FBSDKCoreKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-FBSDKLoginKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-FBSDKShareKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ISO8601DateFormatter.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5FC595998112D0C402F49F3F</key>
+		<key>549FD8A277B6691FCFD55CAD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AB3C4E4EA046993C0FF0DD5F</key>
+		<key>961F5B6AA078294B4B7AA815</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AD1028E3DE3302A5669DD5B0</key>
+		<key>A529BC04565A804E881B0B1A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FAC875FFB30EFF3566AFEBB3</key>
+		<key>B03425BCCC1A94AFFCD10093</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B61BF600266992D2968B7B8C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CEAE5B4343533FBB219F454A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DCC6429BF3924B8662A2B094</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ECC125895F1B9FA1D062A0C4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
