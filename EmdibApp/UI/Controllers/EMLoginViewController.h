@@ -10,4 +10,6 @@
 
 @interface EMLoginViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *FBLoginButton;
+
 @end

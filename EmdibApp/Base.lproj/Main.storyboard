@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LqC-UQ-Tnf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QXo-2V-hPC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -9,7 +9,7 @@
         <!--Auction List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Auction List View Controller" customClass="EMAuctionListViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuctionListView" id="BYZ-38-t0r" userLabel="Auction List View Controller" customClass="EMAuctionListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -133,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3609" y="-938"/>
+            <point key="canvasLocation" x="-2797" y="-938"/>
         </scene>
         <!--Map Item-->
         <scene sceneID="JYw-Pw-o5t">
@@ -157,7 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fKA-oK-9zs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3609" y="-254"/>
+            <point key="canvasLocation" x="-2797" y="-254"/>
         </scene>
         <!--Bid List View Controller-->
         <scene sceneID="Nvo-hR-BRV">
@@ -690,7 +690,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CwI-fi-heP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2913" y="-938"/>
+            <point key="canvasLocation" x="-2101" y="-938"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="Tr5-jD-mAz">
@@ -716,7 +716,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPt-Ho-Ncc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2134" y="-938"/>
+            <point key="canvasLocation" x="-1322" y="-938"/>
         </scene>
         <!--Comment List View Controller-->
         <scene sceneID="q7m-ox-LEq">
@@ -834,26 +834,67 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S7Q-Oh-ron" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2913" y="-254"/>
+            <point key="canvasLocation" x="-2101" y="-254"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="EAJ-U0-uXC">
+        <!--Login View Controller-->
+        <scene sceneID="S4I-bv-6D8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LqC-UQ-Tnf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="JMR-QV-N7c"/>
+                <viewController id="D3z-Wu-Twv" customClass="EMLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="978-bz-Wng"/>
+                        <viewControllerLayoutGuide type="bottom" id="RNN-b8-Wju"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gEL-Ih-0xx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZh-Rq-Er5" userLabel="Logo">
+                                <rect key="frame" x="191" y="96" width="218" height="119"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="218" id="RDz-I3-e1C"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Emdib">
+                                        <attributes>
+                                            <color key="NSColor" red="0.10196078431372549" green="0.73333333333333328" blue="0.043137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="64" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tZh-Rq-Er5" firstAttribute="centerX" secondItem="gEL-Ih-0xx" secondAttribute="centerX" id="ggt-vH-9WT"/>
+                            <constraint firstItem="RNN-b8-Wju" firstAttribute="top" secondItem="tZh-Rq-Er5" secondAttribute="bottom" constant="385" id="upY-GV-Dd6"/>
+                            <constraint firstItem="tZh-Rq-Er5" firstAttribute="top" secondItem="978-bz-Wng" secondAttribute="bottom" constant="32" id="zKs-mf-BSn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="X59-xu-1P9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tt7-gE-ZWU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3609" y="-543"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UzK-nS-Xrg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QXo-2V-hPC" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="usy-SI-aKX">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gi9-wc-p3W">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dNc-xa-5wY"/>
+                        <segue destination="D3z-Wu-Twv" kind="relationship" relationship="rootViewController" id="Y2d-yX-kvI"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="U2S-2i-7mR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eVk-4g-Xbu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4355" y="-938"/>
+            <point key="canvasLocation" x="-4367" y="-543"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
