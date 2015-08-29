@@ -12,8 +12,6 @@
 #import "EMCategory.h"
 #import "EMComment.h"
 
-#define FB_TOKEN @"CAACEdEose0cBAGPT7gucIzS2oqAxd2M8GKakStsZAAjc53Y7Fo8TuuIbEakRf3V848VG1Xpe8nL7i5DQYkOWYJLlmwl7O8RoVkX5zgmRZAZBYawwFpnxfcl8CKE3ysE4FJGf3NZARVZCf7Mn9WLuLPGcVX7kIE5JAMhZCiPzfUkpOtgXDUJDosQlpbTFM5z3bEUMThs77XUwZDZD"
-
 @protocol EMUtilAPI
 
 -(NSURLSessionDataTask *)fetchAllCategoriesOnCompletion:(void (^)(NSArray* categories, NSError *error))completionBlock;

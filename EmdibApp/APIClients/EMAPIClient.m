@@ -8,6 +8,7 @@
 
 #import "EMAPIClient.h"
 #import <AFNetworking/AFHTTPSessionManager.h>
+#import "FBSDKAccessToken.h"
 
 static NSString* const PATH_SELLER_BIDS = @"/seller/auctions/%@/bids";
 static NSString* const PATH_SELLER_BID = @"/seller/auctions/%@/bids/%@";
@@ -46,7 +47,9 @@ static EMAPIClient* apiClient = nil;
     if(self = [super init]) {
         httpSessionManager = [AFHTTPSessionManager manager];
         httpSessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
-        [httpSessionManager.requestSerializer setValue:[NSString stringWithFormat:@"Token token=\"%@\"", FB_TOKEN] forHTTPHeaderField:@"Authorization"];
+        FBSDKAccessToken *token = [FBSDKAccessToken currentAccessToken];
+        NSLog(@"%@", token.tokenString);
+        [httpSessionManager.requestSerializer setValue:[NSString stringWithFormat:@"Token token=\"%@\"", token.tokenString] forHTTPHeaderField:@"Authorization"];
     }
     return self;
 }
