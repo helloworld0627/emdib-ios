@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QXo-2V-hPC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="D3z-Wu-Twv">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -120,7 +120,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Auctions" id="ysR-jW-gip">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="TAC-Yp-wUK"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="TAC-Yp-wUK">
+                            <connections>
+                                <action selector="presentLoginView:" destination="BYZ-38-t0r" id="OJm-Sv-1wA"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hj2-Cu-VjQ">
                             <connections>
                                 <segue destination="ri7-ZG-btk" kind="show" identifier="AuctionDetailCreateSegue" id="Q2I-fd-Q2e"/>
@@ -129,11 +133,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="auctionListTableView" destination="mSO-oW-otW" id="uhC-eU-UGT"/>
+                        <outlet property="backBarButtonItem" destination="TAC-Yp-wUK" id="cVV-gK-cHX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2797" y="-938"/>
+            <point key="canvasLocation" x="-1173" y="-938"/>
         </scene>
         <!--Map Item-->
         <scene sceneID="JYw-Pw-o5t">
@@ -157,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fKA-oK-9zs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2797" y="-254"/>
+            <point key="canvasLocation" x="-1173" y="-202"/>
         </scene>
         <!--Bid List View Controller-->
         <scene sceneID="Nvo-hR-BRV">
@@ -273,7 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxT-ku-Wf8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3609" y="-1609"/>
+            <point key="canvasLocation" x="-1173" y="-1625"/>
         </scene>
         <!--Bid Details-->
         <scene sceneID="Aas-1m-2Xn">
@@ -396,7 +401,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j1t-zN-68Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2913" y="-1609"/>
+            <point key="canvasLocation" x="-477" y="-1625"/>
         </scene>
         <!--Auction Status View Controller-->
         <scene sceneID="7HG-Hm-kA8">
@@ -422,7 +427,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tq9-ft-N23" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2134" y="-1604"/>
+            <point key="canvasLocation" x="302" y="-1620"/>
         </scene>
         <!--Auction Details-->
         <scene sceneID="Ky3-Nv-gY1">
@@ -690,7 +695,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CwI-fi-heP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2101" y="-938"/>
+            <point key="canvasLocation" x="-477" y="-938"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="Tr5-jD-mAz">
@@ -716,7 +721,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPt-Ho-Ncc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1322" y="-938"/>
+            <point key="canvasLocation" x="302" y="-938"/>
         </scene>
         <!--Comment List View Controller-->
         <scene sceneID="q7m-ox-LEq">
@@ -834,12 +839,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S7Q-Oh-ron" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2101" y="-254"/>
+            <point key="canvasLocation" x="-477" y="-202"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="S4I-bv-6D8">
             <objects>
-                <viewController id="D3z-Wu-Twv" customClass="EMLoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginView" id="D3z-Wu-Twv" customClass="EMLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="978-bz-Wng"/>
                         <viewControllerLayoutGuide type="bottom" id="RNN-b8-Wju"/>
@@ -873,28 +878,50 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="X59-xu-1P9"/>
+                    <connections>
+                        <segue destination="ikF-Cb-0yl" kind="show" identifier="TarBarSegue" id="NJV-N9-GAO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tt7-gE-ZWU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3609" y="-543"/>
+            <point key="canvasLocation" x="-3657" y="-938"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="UzK-nS-Xrg">
+        <!--Tab Bar Controller-->
+        <scene sceneID="A2F-zR-rhp">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QXo-2V-hPC" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ikF-Cb-0yl" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gi9-wc-p3W">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="zaA-iz-f5v">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2GP-GT-PYe" kind="relationship" relationship="viewControllers" id="xMA-AO-QND"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BWE-g8-25U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2797" y="-938"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="WfY-zM-vnO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2GP-GT-PYe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="V8U-2u-NSP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b8F-vo-yaw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="D3z-Wu-Twv" kind="relationship" relationship="rootViewController" id="Y2d-yX-kvI"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NFe-NK-9we"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eVk-4g-Xbu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YeD-sP-mLV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4367" y="-543"/>
+            <point key="canvasLocation" x="-1985" y="-938"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

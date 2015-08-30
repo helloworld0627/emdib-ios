@@ -58,8 +58,7 @@
 }
 
 - (void)navigateToAuctionListView {
-    EMAuctionListViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"AuctionListView"];
-    [self.navigationController pushViewController:controller animated:YES];
+    [self performSegueWithIdentifier:@"TarBarSegue" sender:self];
 }
 
 

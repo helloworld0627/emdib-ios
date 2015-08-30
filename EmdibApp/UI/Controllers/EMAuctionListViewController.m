@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) NSArray *auctions;
 @property (nonatomic, strong) NSArray *categories;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *backBarButtonItem;
 
 @end
 
@@ -77,6 +78,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 }
 
+- (IBAction)presentLoginView:(id)sender {
+    UIViewController *loginView = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginView"];
+    [self.navigationController presentViewController:loginView animated:YES completion:nil];
+}
 
 #pragma mark - Navigation
 
