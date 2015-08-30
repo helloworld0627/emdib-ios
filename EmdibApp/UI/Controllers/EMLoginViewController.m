@@ -14,7 +14,7 @@
 @interface EMLoginViewController()<FBSDKLoginButtonDelegate>
 
 @property (nonatomic, strong) FBSDKLoginButton *loginButton;
-@property (nonatomic, strong) UILabel *continueLabel;
+@property (nonatomic, strong) UIButton *continueButton;
 
 @end
 
@@ -33,19 +33,20 @@
     _loginButton.delegate = self;
 
     // continue label
-    _continueLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, _loginButton.frame.size.width, _loginButton.frame.size.height)];
-    _continueLabel.text = @"tap to continue";
-    _continueLabel.center = CGPointMake(centerView.center.x, centerView.center.y + 30);
-    _continueLabel.hidden = ([FBSDKAccessToken currentAccessToken])? NO : YES;
+    _continueButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, _loginButton.frame.size.width, _loginButton.frame.size.height)];
+    [_continueButton setTitle:@"Tap to continue" forState:UIControlStateNormal];
+    [_continueButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    _continueButton.center = CGPointMake(centerView.center.x, centerView.center.y + 30);
+    [self showContinueButton];
 
-    // _continueLabel tap gesture
+    // _continueButton tap gesture
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(navigateToAuctionListView)];
     tapGestureRecognizer.numberOfTapsRequired = 1;
-    [_continueLabel addGestureRecognizer:tapGestureRecognizer];
-    _continueLabel.userInteractionEnabled = YES;
+    [_continueButton addGestureRecognizer:tapGestureRecognizer];
+    _continueButton.userInteractionEnabled = YES;
 
     [centerView addSubview:_loginButton];
-    [centerView addSubview:_continueLabel];
+    [centerView addSubview:_continueButton];
 
     centerView.center = self.view.center;
     [self.view addSubview:centerView];
@@ -72,11 +73,16 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
     }
     [FBSDKAccessToken refreshCurrentAccessToken:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
     }];
+    [self showContinueButton];
 }
 
 - (void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton {
+    [self showContinueButton];
 }
 
+- (void)showContinueButton {
+    _continueButton.hidden = ([FBSDKAccessToken currentAccessToken])? NO : YES;
+}
 
 /*
 #pragma mark - Navigation
