@@ -12,6 +12,8 @@
 #import "EMCategory.h"
 #import "EMComment.h"
 
+#define HOST_URL @"https://sleepy-inlet-9029.herokuapp.com"
+
 @protocol EMUtilAPI
 
 -(NSURLSessionDataTask *)fetchAllCategoriesOnCompletion:(void (^)(NSArray* categories, NSError *error))completionBlock;
