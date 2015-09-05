@@ -7,10 +7,16 @@
 //
 
 #import "EMMapViewController.h"
+#import "EMAPIClient.h"
+#import "EMAuction+MKAnnotation.h"
 
 static int AUCTION_TAB_ID = 1;
 
 @interface EMMapViewController ()
+
+@property (nonatomic, strong) NSArray *sellerAuctions;
+@property (nonatomic, strong) NSArray *buyerAuctions;
+
 
 @end
 
@@ -19,12 +25,39 @@ static int AUCTION_TAB_ID = 1;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [[EMAPIClient sharedAPIClient] fetchAuctionsAsBuyerOnCompletion:^(NSArray *auctions, NSError *error) {
+        if (error) {
+            NSLog(@"%@", error.localizedDescription);
+            return;
+        }
+        self.buyerAuctions = auctions;
+        [self.mapView addAnnotations:self.buyerAuctions];
+        [self.mapView addAnnotations:self.sellerAuctions];
+        [self.mapView showAnnotations:self.buyerAuctions animated:YES];
+    }];
+    [[EMAPIClient sharedAPIClient] fetchAuctionsAsSellerOnCompletion:^(NSArray *auctions, NSError *error) {
+        if (error) {
+            NSLog(@"%@", error.localizedDescription);
+            return;
+        }
+        self.sellerAuctions = auctions;
+        [self.mapView addAnnotations:self.buyerAuctions];
+        [self.mapView addAnnotations:self.sellerAuctions];
+        [self.mapView showAnnotations:self.sellerAuctions animated:YES];
+    }];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+#pragma mark - IBActions
 
 - (IBAction)segueAuctionView:(id)sender {
     [self.tabBarController setSelectedIndex:AUCTION_TAB_ID];
