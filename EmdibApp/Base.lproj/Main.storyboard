@@ -140,10 +140,10 @@
             </objects>
             <point key="canvasLocation" x="-1173" y="-938"/>
         </scene>
-        <!--Map Item-->
+        <!--Map-->
         <scene sceneID="JYw-Pw-o5t">
             <objects>
-                <viewController id="IEo-fF-3a4" userLabel="Map Item" sceneMemberID="viewController">
+                <viewController id="IEo-fF-3a4" customClass="EMMapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mnd-BY-2yX"/>
                         <viewControllerLayoutGuide type="bottom" id="5lA-EV-8TO"/>
@@ -158,7 +158,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="thr-ou-LSj"/>
+                    <navigationItem key="navigationItem" title="Map" id="thr-ou-LSj">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="9cM-D3-ZEG">
+                            <connections>
+                                <action selector="presentLoginView:" destination="IEo-fF-3a4" id="tMW-aq-caK"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Wav-cz-h2J">
+                            <connections>
+                                <action selector="segueAuctionView:" destination="IEo-fF-3a4" id="OMz-fd-fox"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addAuctionBarItemButton" destination="Wav-cz-h2J" id="aIg-uA-PXC"/>
+                        <outlet property="backBarItemButton" destination="9cM-D3-ZEG" id="5aq-LI-Z2i"/>
+                        <outlet property="mapView" destination="BHQ-YG-h5V" id="rIY-Z5-may"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fKA-oK-9zs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -432,7 +448,7 @@
         <!--Auction Details-->
         <scene sceneID="Ky3-Nv-gY1">
             <objects>
-                <viewController id="ri7-ZG-btk" customClass="EMAuctionDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuctionDetailsView" id="ri7-ZG-btk" customClass="EMAuctionDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SOq-Oo-pNn"/>
                         <viewControllerLayoutGuide type="bottom" id="0dl-XP-KkV"/>
@@ -884,7 +900,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tt7-gE-ZWU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3673" y="-518"/>
+            <point key="canvasLocation" x="-3937" y="-518"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="A2F-zR-rhp">
@@ -903,7 +919,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BWE-g8-25U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2869" y="-518"/>
+            <point key="canvasLocation" x="-3029" y="-518"/>
         </scene>
         <!--List-->
         <scene sceneID="WfY-zM-vnO">
@@ -945,6 +961,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="n8O-M3-NjM"/>
+        <segue reference="Q2I-fd-Q2e"/>
     </inferredMetricsTieBreakers>
 </document>
