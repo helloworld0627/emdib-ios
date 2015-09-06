@@ -40,6 +40,10 @@
     }];
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [self.auctionListTableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
