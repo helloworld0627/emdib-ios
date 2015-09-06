@@ -114,7 +114,7 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
     // assign cell's value
     if ([TITLE_CELL_ID isEqualToString:cellIdentifier]) {
         EMAuctionDetailTitleTableViewCell *cell = (EMAuctionDetailTitleTableViewCell*)tableViewCell;
-        cell.titleLabel.text = self.selectedAuction.auctionTitle;
+        cell.titleTextView.text = self.selectedAuction.auctionTitle;
         return cell;
 
     } else if ([DESC_CELL_ID isEqualToString:cellIdentifier]) {
@@ -294,7 +294,7 @@ static NSString * const ENDPRICE_CELL_ID = @"AuctionDetailEndPriceCell";
         // assign cell's value
         if ([TITLE_CELL_ID isEqualToString:cellIdentifier]) {
             EMAuctionDetailTitleTableViewCell *cell = (EMAuctionDetailTitleTableViewCell*)tableViewCell;
-            self.selectedAuction.auctionTitle = cell.titleLabel.text;
+            self.selectedAuction.auctionTitle = cell.titleTextView.text;
 
         } else if ([DESC_CELL_ID isEqualToString:cellIdentifier]) {
             EMAuctionDetailDescriptionTableViewCell *cell = (EMAuctionDetailDescriptionTableViewCell*)tableViewCell;

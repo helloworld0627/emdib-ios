@@ -12,6 +12,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.titleTextView.textContainer.maximumNumberOfLines = 1;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
