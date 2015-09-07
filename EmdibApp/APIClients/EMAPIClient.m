@@ -9,6 +9,7 @@
 #import "EMAPIClient.h"
 #import <AFNetworking/AFHTTPSessionManager.h>
 #import "FBSDKAccessToken.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 static NSString* const PATH_SELLER_BIDS = @"/seller/auctions/%@/bids";
 static NSString* const PATH_SELLER_BID = @"/seller/auctions/%@/bids/%@";
@@ -301,6 +302,28 @@ static EMAPIClient* apiClient = nil;
             ];
 }
 
+-(void)fetchUser:(NSString *)userId
+                       onCompletion:(void (^)(EMUser* user, NSError *error))completionBlock {
+    NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
+    [parameters setValue:@"id,name" forKey:@"fields"];
+    FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc] initWithGraphPath:userId
+                                                                   parameters:parameters];
+    [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+        if (completionBlock) {
+            if (error) {
+                dispatch_async(dispatch_get_main_queue(), ^{completionBlock(nil, error); });
+                return;
+            }
+            NSError *JSONError = nil;
+            EMUser *user = [self getUserFromResponse:result error:&JSONError];
+            if (JSONError) {
+                dispatch_async(dispatch_get_main_queue(), ^{completionBlock(nil, JSONError); });
+                return;
+            }
+            dispatch_async(dispatch_get_main_queue(), ^{completionBlock(user, nil); });
+        }
+    }];
+}
 
 #pragma mark - Private Mantle
 
@@ -334,6 +357,11 @@ static EMAPIClient* apiClient = nil;
 
 -(EMBid *)getBidFromResponse:(id)responseObject error:(NSError**)error {
     return [MTLJSONAdapter modelOfClass:[EMBid class] fromJSONDictionary:responseObject error:error];
+}
+
+// User
+-(EMUser *)getUserFromResponse:(id)responseObject error:(NSError**)error {
+    return [MTLJSONAdapter modelOfClass:[EMUser class] fromJSONDictionary:responseObject error:error];
 }
 
 // Error

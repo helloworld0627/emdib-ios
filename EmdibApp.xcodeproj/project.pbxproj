@@ -15,6 +15,8 @@
 		C001387C1B4396E2001EF6A9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C001387A1B4396E2001EF6A9 /* LaunchScreen.xib */; };
 		C00138881B4396E3001EF6A9 /* EmdibAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C00138871B4396E3001EF6A9 /* EmdibAppTests.m */; };
 		C01820321B9B704300D51A1C /* EMMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C01820311B9B704300D51A1C /* EMMapViewController.m */; };
+		C018203D1B9D445900D51A1C /* EMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C018203C1B9D445900D51A1C /* EMUser.m */; };
+		C018203E1B9D445900D51A1C /* EMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C018203C1B9D445900D51A1C /* EMUser.m */; };
 		C0352CDE1B90427B009E8B8E /* EMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0352CDD1B90427B009E8B8E /* EMLoginViewController.m */; };
 		C0352CDF1B90427B009E8B8E /* EMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0352CDD1B90427B009E8B8E /* EMLoginViewController.m */; };
 		C07F94201B50936100156FA0 /* EMAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C07F941F1B50936100156FA0 /* EMAPIClient.m */; };
@@ -105,6 +107,8 @@
 		C00138871B4396E3001EF6A9 /* EmdibAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmdibAppTests.m; sourceTree = "<group>"; };
 		C01820301B9B704300D51A1C /* EMMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMMapViewController.h; path = UI/Controllers/EMMapViewController.h; sourceTree = "<group>"; };
 		C01820311B9B704300D51A1C /* EMMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMMapViewController.m; path = UI/Controllers/EMMapViewController.m; sourceTree = "<group>"; };
+		C018203B1B9D445900D51A1C /* EMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMUser.h; path = Models/EMUser.h; sourceTree = "<group>"; };
+		C018203C1B9D445900D51A1C /* EMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMUser.m; path = Models/EMUser.m; sourceTree = "<group>"; };
 		C0352CDC1B90427B009E8B8E /* EMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMLoginViewController.h; path = UI/Controllers/EMLoginViewController.h; sourceTree = "<group>"; };
 		C0352CDD1B90427B009E8B8E /* EMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMLoginViewController.m; path = UI/Controllers/EMLoginViewController.m; sourceTree = "<group>"; };
 		C07F941E1B50936100156FA0 /* EMAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMAPIClient.h; path = APIClients/EMAPIClient.h; sourceTree = "<group>"; };
@@ -296,6 +300,8 @@
 				C0CA36071B49DE1D00725563 /* EMBid.m */,
 				C09AEAB81B69BC8C00BFC494 /* EMAuction+MKAnnotation.h */,
 				C09AEAB91B69BC8C00BFC494 /* EMAuction+MKAnnotation.m */,
+				C018203B1B9D445900D51A1C /* EMUser.h */,
+				C018203C1B9D445900D51A1C /* EMUser.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -604,6 +610,7 @@
 				C0B804191B64260400B0CA47 /* EMBidListViewController.m in Sources */,
 				C097ABD21B49BF1F001ED5B8 /* EMBaseModel.m in Sources */,
 				C0B804741B64351600B0CA47 /* EMAuctionDetailEndDateTableViewCell.m in Sources */,
+				C018203D1B9D445900D51A1C /* EMUser.m in Sources */,
 				C097ABD61B49C17E001ED5B8 /* EMCategory.m in Sources */,
 				C0CA36001B49D99000725563 /* EMAuction.m in Sources */,
 				C0CA36041B49DB0600725563 /* EMComment.m in Sources */,
@@ -639,6 +646,7 @@
 				C0B804611B64346E00B0CA47 /* EMAuctionDetailStatusTableViewCell.m in Sources */,
 				C0CA36051B49DB0600725563 /* EMComment.m in Sources */,
 				C0B804751B64351600B0CA47 /* EMAuctionDetailEndDateTableViewCell.m in Sources */,
+				C018203E1B9D445900D51A1C /* EMUser.m in Sources */,
 				C0B8047D1B64356900B0CA47 /* EMAuctionDetailEndPriceTableViewCell.m in Sources */,
 				C0B804591B6433AF00B0CA47 /* EMBidDetailPriceTableViewCell.m in Sources */,
 				C09AEABB1B69BC8C00BFC494 /* EMAuction+MKAnnotation.m in Sources */,

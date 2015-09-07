@@ -11,6 +11,7 @@
 #import "EMBid.h"
 #import "EMCategory.h"
 #import "EMComment.h"
+#import "EMUser.h"
 
 #define HOST_URL @"https://sleepy-inlet-9029.herokuapp.com"
 
@@ -61,7 +62,14 @@
 
 @end
 
-@interface EMAPIClient : NSObject<EMUtilAPI, EMSellerAPI, EMBuyerAPI>
+@protocol EMUserAPI
+
+-(void)fetchUser:(NSString *)userId
+    onCompletion:(void (^)(EMUser* user, NSError *error))completionBlock;
+
+@end
+
+@interface EMAPIClient : NSObject<EMUtilAPI, EMSellerAPI, EMBuyerAPI, EMUserAPI>
 
 +(id) sharedAPIClient;
 
